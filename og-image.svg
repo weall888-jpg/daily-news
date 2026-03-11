@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5c1a30"/>
+      <stop offset="50%" style="stop-color:#7a2840"/>
+      <stop offset="100%" style="stop-color:#5c1a30"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="85%" cy="15%" r="35%">
+      <stop offset="0%" style="stop-color:#e8553d;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#e8553d;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="15%" cy="85%" r="30%">
+      <stop offset="0%" style="stop-color:#a8b8d0;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#a8b8d0;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  <!-- Badge -->
+  <rect x="480" y="180" width="240" height="40" rx="20" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="510" cy="200" r="5" fill="#e8553d"/>
+  <text x="600" y="206" fill="white" font-family="sans-serif" font-size="16" font-weight="500" text-anchor="middle" opacity="0.9">每日更新</text>
+  <!-- Title -->
+  <text x="600" y="310" fill="white" font-family="sans-serif" font-size="68" font-weight="900" text-anchor="middle" letter-spacing="3">國教盟新聞摘要</text>
+  <!-- Subtitle -->
+  <text x="600" y="370" fill="white" font-family="sans-serif" font-size="26" font-weight="400" text-anchor="middle" opacity="0.8">兒少教育新聞精選 · 國教行動聯盟</text>
+  <!-- Bottom URL -->
+  <text x="600" y="590" fill="white" font-family="sans-serif" font-size="15" text-anchor="middle" opacity="0.5">weall888-jpg.github.io/daily-news</text>
+</svg>
