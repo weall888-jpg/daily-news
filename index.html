@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>國教盟每日新聞摘要</title>
+
+<!-- LINE / Facebook 分享預覽 -->
+<meta property="og:title" content="國教盟每日新聞摘要">
+<meta property="og:description" content="每日兒少教育新聞精選，由國教行動聯盟整理">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://weall888-jpg.github.io/daily-news/">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1e3a5f;
+  --accent: #2a9d8f;
+  --danger: #c9184a;
+  --warning: #e76f51;
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --text: #2d3436;
+  --text-light: #636e72;
+  --border: #e9ecef;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* 頂部標題 */
+header {
+  background: var(--primary);
+  color: white;
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.header-date {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
+.header-title {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.header-sub {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+/* 內容區 */
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* 區塊標題 */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 20px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--primary);
+}
+
+.section-title.highlight {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+/* 新聞卡片 */
+.news-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-left: 4px solid var(--accent);
+}
+
+.news-card.featured {
+  border-left-color: var(--danger);
+  background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%);
+}
+
+.news-source {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.news-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.news-summary {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.news-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+
+/* 妃寶短評 */
+.comment-section {
+  background: linear-gradient(135deg, #e8f5f3 0%, #ffffff 100%);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+  border: 2px solid var(--accent);
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.comment-text {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* 底部 */
+footer {
+  text-align: center;
+  padding: 20px 16px;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* LINE 分享按鈕 */
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #06C755;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 16px;
+}
+
+.share-btn:hover {
+  background: #05b04c;
+}
+
+/* 更新時間 */
+.update-time {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 16px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-date" id="headerDate">2026年3月11日（週二）</div>
+  <h1 class="header-title">📰 國教盟每日新聞摘要</h1>
+  <div class="header-sub">兒少教育新聞精選 by 國教行動聯盟</div>
+</header>
+
+<main>
+
+<!-- 🔥 今日焦點 -->
+<div class="section-title highlight">🔥 今日焦點</div>
+
+<div class="news-card featured">
+  <div class="news-source">中央社 · 2026/03/11</div>
+  <div class="news-title">【示例】教育部宣布新課綱修訂方向</div>
+  <div class="news-summary">
+    教育部今日召開記者會，宣布將針對108課綱進行微調，重點包含強化數位素養、心理健康教育等面向...
+  </div>
+  <a href="#" class="news-link">閱讀全文 →</a>
+</div>
+
+<div class="news-card featured">
+  <div class="news-source">聯合報 · 2026/03/11</div>
+  <div class="news-title">【示例】校園霸凌通報數創新高</div>
+  <div class="news-summary">
+    根據教育部最新統計，本學期校園霸凌通報案件較去年同期增加15%...
+  </div>
+  <a href="#" class="news-link">閱讀全文 →</a>
+</div>
+
+<!-- 📚 教育政策 -->
+<div class="section-title">📚 教育政策</div>
+
+<div class="news-card">
+  <div class="news-source">自由時報 · 2026/03/11</div>
+  <div class="news-title">【示例】雙語教育政策檢討會議召開</div>
+  <div class="news-summary">
+    教育部召開雙語政策檢討會議，聽取各界意見...
+  </div>
+  <a href="#" class="news-link">閱讀全文 →</a>
+</div>
+
+<div class="news-card">
+  <div class="news-source">ETtoday · 2026/03/11</div>
+  <div class="news-title">【示例】私幼準公共化補助調整</div>
+  <div class="news-summary">
+    行政院宣布將調整私立幼兒園準公共化補助方案...
+  </div>
+  <a href="#" class="news-link">閱讀全文 →</a>
+</div>
+
+<!-- 👶 兒少議題 -->
+<div class="section-title">👶 兒少議題</div>
+
+<div class="news-card">
+  <div class="news-source">TVBS · 2026/03/11</div>
+  <div class="news-title">【示例】兒虐案件社工訪視頻率擬提高</div>
+  <div class="news-summary">
+    衛福部研議提高高風險家庭訪視頻率...
+  </div>
+  <a href="#" class="news-link">閱讀全文 →</a>
+</div>
+
+<div class="news-card">
+  <div class="news-source">中時電子報 · 2026/03/11</div>
+  <div class="news-title">【示例】青少年心理健康資源不足</div>
+  <div class="news-summary">
+    調查顯示六成青少年認為心理諮商資源取得困難...
+  </div>
+  <a href="#" class="news-link">閱讀全文 →</a>
+</div>
+
+<!-- 🏫 校園動態 -->
+<div class="section-title">🏫 校園動態</div>
+
+<div class="news-card">
+  <div class="news-source">國語日報 · 2026/03/11</div>
+  <div class="news-title">【示例】全國語文競賽報名開跑</div>
+  <div class="news-summary">
+    112學年度全國語文競賽即日起開放報名...
+  </div>
+  <a href="#" class="news-link">閱讀全文 →</a>
+</div>
+
+<div class="news-card">
+  <div class="news-source">親子天下 · 2026/03/11</div>
+  <div class="news-title">【示例】實驗教育申請數持續成長</div>
+  <div class="news-summary">
+    非學校型態實驗教育申請人數五年成長三倍...
+  </div>
+  <a href="#" class="news-link">閱讀全文 →</a>
+</div>
+
+<!-- 💬 小編短評 -->
+<div class="comment-section">
+  <div class="comment-header">✏️ 小編短評</div>
+  <div class="comment-text">
+    今天的新聞焦點在教育政策調整和校園安全。值得關注的是霸凌通報數上升，這提醒我們不只要處理個案，更要思考預防機制。國教盟持續呼籲教育部建立更完善的校園安全網絡！
+  </div>
+</div>
+
+<!-- 分享按鈕 -->
+<div style="text-align: center;">
+  <a href="https://social-plugins.line.me/lineit/share?url=https://weall888-jpg.github.io/daily-news/" target="_blank" class="share-btn">
+    📤 分享到 LINE
+  </a>
+</div>
+
+<div class="update-time">
+  更新時間：<span id="updateTime">2026/03/11 08:00</span>
+</div>
+
+</main>
+
+<footer>
+  由 <a href="https://www.facebook.com/naer.tw" target="_blank">國教行動聯盟</a> 整理<br>
+  新聞來源為各媒體公開報導
+</footer>
+
+<script>
+// 自動更新日期
+const now = new Date();
+const days = ['日', '一', '二', '三', '四', '五', '六'];
+const dateStr = `${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日（週${days[now.getDay()]}）`;
+document.getElementById('headerDate').textContent = dateStr;
+
+const timeStr = `${now.getFullYear()}/${String(now.getMonth()+1).padStart(2,'0')}/${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+document.getElementById('updateTime').textContent = timeStr;
+</script>
+
+</body>
+</html>
