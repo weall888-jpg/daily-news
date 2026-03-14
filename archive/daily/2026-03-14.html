@@ -59,12 +59,6 @@ body {
   color: white; position: relative; overflow: hidden;
 }
 [data-theme="dark"] .header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); }
-.header::before {
-  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-  background: radial-gradient(circle, rgba(232,85,61,0.08) 0%, transparent 60%);
-  animation: headerPulse 8s ease-in-out infinite;
-}
-@keyframes headerPulse { 0%,100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 1; } }
 .header-inner { position: relative; z-index: 1; padding: 28px 20px 20px; text-align: center; }
 .header-badge {
   display: inline-flex; align-items: center; gap: 6px;
@@ -164,7 +158,6 @@ main { max-width: 600px; margin: 0 auto; padding: 24px 16px 16px; }
 .news-title { font-size: 0.95rem; font-weight: 700; line-height: 1.5; margin-bottom: 6px; color: var(--text); }
 .badge { display: inline-block; padding: 1px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; margin-right: 6px; vertical-align: middle; }
 .badge-hot { background: var(--danger); color: white; }
-.news-summary { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
 .news-link {
   display: inline-flex; align-items: center; gap: 4px; margin-top: 10px;
   font-size: 0.82rem; color: var(--accent); text-decoration: none; font-weight: 600; transition: gap 0.2s;
@@ -218,9 +211,7 @@ footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
   .header-title { font-size: 1.3rem; }
   .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 6px; }
   .stat-number { font-size: 1.2rem; }
-  .nav-bar { flex-wrap: wrap; }
 }
-/* iOS safe area */
 @supports (padding: env(safe-area-inset-bottom)) {
   .back-top { bottom: calc(24px + env(safe-area-inset-bottom)); }
 }
@@ -245,8 +236,8 @@ footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
 </div>
 
 <div class="stats-bar">
-  <div class="stat-card"><div class="stat-number">7</div><div class="stat-label">今日新聞</div></div>
-  <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">媒體露出</div></div>
+  <div class="stat-card"><div class="stat-number">390</div><div class="stat-label">今日新聞</div></div>
+  <div class="stat-card"><div class="stat-number">93</div><div class="stat-label">媒體露出</div></div>
   <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">今日發稿</div></div>
   <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">焦點報導</div></div>
 </div>
@@ -255,43 +246,887 @@ footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
 <div class="section-header highlight"><div class="section-icon">🔥</div><div class="section-name">今日焦點</div><span class="section-count">2 則</span></div>
 <article class="news-card featured" style="animation-delay:0.0s">
   <div class="card-top">
-    <div class="news-source"><span class="source-dot"></span>Cnbeta.com.tw</div>
+    <div class="news-source"><span class="source-dot"></span>tngs.tn.edu.tw</div>
     <div class="news-date">2026-03-13</div>
   </div>
-  <h3 class="news-title"><span class="badge badge-hot">焦點</span>AI假学生在美国狂骗助学金</h3>
-  <p class="news-summary">当大家都在期待AI应用的广阔前景时，骗子早就把AI用得炉火纯青，骗了不少钱。去年，美国几个州的社区大学系统，被骗子盯上了。他们用AI创造的“幽灵学生”申请社区大学系统的助学金。
-所谓“幽灵学生”就是...</p>
-  <a href="https://www.cnbeta.com.tw/articles/tech/1553306.htm" target="_blank" rel="noopener" class="news-link">
+  <h3 class="news-title"><span class="badge badge-hot">焦點</span>【轉知】國立臺北教育大學台灣語言與文化學系將於115學年度正式招生– 國立臺南女子高級中學</h3>
+  <a href="https://news.google.com/rss/articles/CBMi2AJBVV95cUxPV2lwTmY4SS1lWTAzWkx0OThKNUdWaUZzTVlCeVZmU2Zqbm9JbmNJa2NIQlItekU4clN0c2VHNEhlVDRxbGJHV0V2NlF0TEhpdlU0enFvRHV2M3hPQndFcUhOcXRuRGotZW9UNXlaSXZjclFDbzhzS21kczNHS3NRaDh3Yzg4dTZvZmpic2s3amxzcG10OEZJdjhwakItOTlvRW1MWDJjZTg5aDJPQmgzMmlSc0VRY3AtSER1ZVZaMEtxcmRmOVpUdTd5S1FKZUUyVTctYk1MNW5IUXpsc1hOZUlObVJOaXlBWmZsQUNNcGhPWFFOVlIxZU01Y3lHa0FoWHlSYXdFSWcwOFFkcjVoWmZ1YnNSNlc1R1Z0MnlJWkhxTGkwOHYtaUxyTllfR2JYZHg2UTdNV09JaWp1SjY0c2oyRmthN0NsNXd1Nmo5ZTNmZS1JT0lWMA?oc=5" target="_blank" rel="noopener" class="news-link">
     閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
 </article><article class="news-card featured" style="animation-delay:0.1s">
   <div class="card-top">
-    <div class="news-source"><span class="source-dot"></span>Cnbeta.com.tw</div>
+    <div class="news-source"><span class="source-dot"></span>原住民族文化事業基金會</div>
     <div class="news-date">2026-03-13</div>
   </div>
-  <h3 class="news-title"><span class="badge badge-hot">焦點</span>山寨豪车老头乐热销农村引担忧：不用考驾照/上牌/买保险 时速80码各种闯</h3>
-  <p class="news-summary">仅需一万多元就能买到外观酷似宝马X5、库里南等豪车的老头乐，这种现象在四五线城市并不鲜见。近期不少网友发现，大量老头乐商家正活跃在社交媒体平台，打着工厂直销的旗号通过短视频引流。其主页上的山寨豪车琳琅...</p>
-  <a href="https://www.cnbeta.com.tw/articles/tech/1553330.htm" target="_blank" rel="noopener" class="news-link">
+  <h3 class="news-title"><span class="badge badge-hot">焦點</span>台東縣府、馬偕攜手合作 共築兒少保護網</h3>
+  <a href="https://news.google.com/rss/articles/CBMiRkFVX3lxTFBNRHVkYWl0TnBqbEV2R2x2ZVA3ZldobkVEZVFnS1Itd1NaV2tBLURPVkRZeWU3dXNneWlXYTUxcDZabld4RlE?oc=5" target="_blank" rel="noopener" class="news-link">
     閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
 </article>
 <div class="section-header"><div class="section-icon">📚</div><div class="section-name">教育政策</div><span class="section-count">1 則</span></div>
 <article class="news-card" style="animation-delay:0.2s">
   <div class="card-top">
-    <div class="news-source"><span class="source-dot"></span>Cnbeta.com.tw</div>
-    <div class="news-date">2026-03-13</div>
+    <div class="news-source"><span class="source-dot"></span>edu.tw</div>
+    <div class="news-date">2026-01-14</div>
   </div>
-  <h3 class="news-title">AI新锐被列为“供应链风险” 五角大楼正分裂美国科技企业？</h3>
-  <p class="news-summary">美国五角大楼将人工智能（AI）新锐Anthropic列为“供应链风险”后，美国硅谷的科技巨头们基于各自的利益考量，立场开始分化。其中，微软选择公开支持Anthropic起诉五角大楼，而Google则在...</p>
-  <a href="https://www.cnbeta.com.tw/articles/tech/1553312.htm" target="_blank" rel="noopener" class="news-link">
+  <h3 class="news-title">臺灣台語輸入法App上架 即日起行動裝置也能輸入臺灣台語</h3>
+  <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1Vbm1mYTBVeFJybUtkUTV3eXRQZDJ0dlpqUEVFQ29NUmsycTlRZ2VzS0YwN09ncGd2MTY2UGU4VnF3d1o3NFZIejhnNEplYkgzX3M3YnRoalJDbHpldUhZUnJ0OHdwMFdzNHM1SGt6VWpXMmE2Q0N3ZUktWVJUTk0?oc=5" target="_blank" rel="noopener" class="news-link">
     閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
   </a>
 </article>
-<div class="section-header" style="--sec-color:#6366f1"><div class="section-icon" style="background:rgba(99,102,241,0.1)">📡</div><div class="section-name">媒體聲量</div><span class="section-count">0 則露出</span></div>
-<div class="no-news">今日暫無國教盟相關媒體露出</div>
+<div class="section-header accent"><div class="section-icon">👶</div><div class="section-name">兒少議題</div><span class="section-count">1 則</span></div>
+<article class="news-card" style="animation-delay:0.4s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>更生新聞網</div>
+    <div class="news-date">2026-03-12</div>
+  </div>
+  <h3 class="news-title">兒少保護專案招募中南區親職引導員</h3>
+  <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTFBQeVFmVTJ4Nlg1eHBFVGF0dkZsVUppblZIV25CdzNNUVhWUjFqRWxjUU82Y0JpLXZqWmdBTWszNkh5TF8tRlAyVg?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article>
+<div class="section-header" style="--sec-color:#6366f1"><div class="section-icon" style="background:rgba(99,102,241,0.1)">📡</div><div class="section-name">媒體聲量</div><span class="section-count">93 則露出</span></div>
+<article class="news-card" style="animation-delay:0.6s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>基督教論壇報</div>
+    <div class="news-date">2025-08-20</div>
+  </div>
+  <h3 class="news-title">教育部中學性教育教學手冊內容引爭議 國教盟與公衛學者齊呼籲新學期應停用</h3>
+  <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9OQmU4dHp3dk5Tc3A3a0tuYVVxU3B0bFM5eXhwQTRyQmxKN1pHT0JSUTFMVnZGUWJ1R0hyRWh6dXlvakVMYXhsa0lOMzdyTHRzQWtNUUFMQnBsOWRrcUNsbXh3VHdQRmx4clE?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.7s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>信傳媒</div>
+    <div class="news-date">2026-03-12</div>
+  </div>
+  <h3 class="news-title">退學生持刀闖嘉義校園再敲警鐘》國教盟：離校青少年追蹤與校安制度待補強</h3>
+  <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE0xQ015aUh4TTd6OXFPZlpldWdNQ1EzQ3M5Q0xoaW5QdmJ0X09RaDNqN2hxQWVGTDhrcllpQ1VOVEIxc2xkbl9PRnFBZ1pJNHloS0QzR3pVc3VrQQ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.8s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>大紀元新聞網</div>
+    <div class="news-date">2026-03-13</div>
+  </div>
+  <h3 class="news-title">國教盟籲速修《少事法》</h3>
+  <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE8taTJzUU9ELUhHS01oTmN6VXZBRU9xNXVMYTliWHprNERzWEl1OHdaS2tMZnY2WnNVOEp5NHJ3dWU3b2RMaXZaSTBZdURwalVFOU5OdzJkdThhVzZnYjJkaNIBZkFVX3lxTE5GVzM2UnJlZ0F0Sm42WGprZEQya1czZGFXS3R0ZWlSN0RmbkZKUUhzSmh3Y0tDQ3lnUW1VM3lFRW9MUnR2bXBxRmF5ek5qVDlXNjhYY2FLRk5PYVFjX0ptMFZKb1Jldw?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.9s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>MSN</div>
+    <div class="news-date">2026-03-13</div>
+  </div>
+  <h3 class="news-title">不滿新北割頸案判決 國教盟提6主張： 儘速修正少事法</h3>
+  <a href="https://news.google.com/rss/articles/CBMiggRBVV95cUxQcmU1R1laTngtMGpoLTJXVk1IR05ackZEQ0QtUVl4R1hQazd5RkF4YVFnOURaWHdsQVRBaGdlTFRqdVYyT2NpeS1WUk9aMHdjVUlwZ2l1bVpQck1JbjRlY1hka1VtMWRQSkVXdWRST05vbmJ6UmFhQXJmSng0MWNOS3NTcGxldUVhaHNsbE9EWWVmenZPX2lnWHY4YWoxUU9xcWRMU0IxN0xsNXdYN01DclhrZEVOZ2h4UHJKelh1dHhXSmRpLUtTLW9CS0ZZSVE1OXRoektPRUJzekFsVHlBOGZNaUNDX3BucUlmN19xQlAtdFFlSFhqdmxUeHBqUk5Bb0ppb3V2c2duX3pJZS1POF9FMTBFcEFhcDUyWHRxblliY1pLTEdfTnQtcFFPcG94bDZPVnpMbGF6c29XQXZfRm5abHdndzdNSU5BY3F2dzV4T0Vtbi1mRl83LTdKempod08wek8xZE9ZQjdsY2t5Mk5aTElJeUVPSkkxNmVYR3hpdHNHTGJZVTJqbGtBdldnUld5TU8zY1pXZWR6VXBnaV9BZlFjTWNMYTB2Z1BnNDRpTVpaWDBBRHhlTE8tQVhjVndPM05jNzh0aFU3U19wdkpNdF9NU0MxZ19NX0l6ZGwtNTdlNnNkdUVCNGY1M0tLUHRqT2dDTXVKNElCSDFuWERR?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:1.0s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>聯合新聞網</div>
+    <div class="news-date">2026-03-13</div>
+  </div>
+  <h3 class="news-title">校園割頸案判決爭議未止 國教盟提6大主張：快修少事法</h3>
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE4ySkxEVHVnUG1aOEkwVUczNjc3MWZkV1VrWE5jUzI1S0dOeW9RVjZ6T2UtNlBNNlR6bTVJa21NaG1rMzRaZXBEZmlHSkY1anFM0gFWQVVfeXFMTmNhaE5lMDhpOXBfVDNHR25sZ2NBbnJHbHpmc3pMSGxRVjBLQ1VzSDlpZ0ctb0hFWWxPczZtV1Z0ODg0RElyWXRBcGhPMGlvOGJYdzhISmc?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:1.1s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>中時新聞網</div>
+    <div class="news-date">2026-03-10</div>
+  </div>
+  <h3 class="news-title">嘉義退學生持刀闖校！國教盟怒批校安體系失靈</h3>
+  <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBZRVI2WFFkNzNsTHEyRlVqUUMzVzRkNFdWa05BZUZQNTE2cFozbGFpMENQb1NuZHRWTmNFWWt3ZW9lR2xTUi1BWGs3NGZGWmtlQ0ZoTzBKSmtFQ1FlWm1yU3p5R1FucFdaT0tLLXZR?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:1.2s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2026-03-10</div>
+  </div>
+  <h3 class="news-title">嘉義退學生持刀返校 國教盟：離校不代表風險消失</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFBSQUs2cE1uX2pCX1Q0a05ieWd6N1k1V2JyWVEtUDBmVU1LUGE3U1l5X2ttR090cjZyMjZncU4xb2Q0dzVKcVg3MnplX0pVa2ZlY25BMlg5dFZlaVNVcVFNc3JTV3DSAWpBVV95cUxPYml0UVQ3WVMxNTZ4N3BVOVFoYzNYOGptMkFfLTFRNUEyMGsyVTh3d2F5REhjUUl5U2FLSXhOaTBMTUFiQ1IzNzJYQkFLY2NwY25ZMDFIS0VKY3kyNS16Z0Ryd0JPMU43bWd3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:1.3s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>MSN</div>
+    <div class="news-date">2026-03-13</div>
+  </div>
+  <h3 class="news-title">嘉義退學生持刀闖校!國教盟怒批校安體系失靈</h3>
+  <a href="https://news.google.com/rss/articles/CBMi0AJBVV95cUxNVVZhZlBDUEpuNnpIekpCT2pld0ctclVfSzE1aTRoQnh0Q2h5M3kzT2FHOV90T01rbnJhV2VRbGxaXzBFR2xROGRPQ284OHJoUmRFSW85S2toNWllN09MZjlKUWd3TzZPMmVDbjRkODR5dm1oUGhwa3FKZmZRZi1jSkloaXpuMFVUd0xQUmh5UnFaa0htTG1abmFEcHo0Z2Rna1lJTTVpaFZsVEcxT08wQlVCal9RMmJzM2Q4YlVXS0dfRTlTVS04aGRLX2dzYjItc1huZlZPYzNNaFIwcjY5NDg1Ym9QOXFtT0NiZ1VKOTlZRUNHQmw0ajVDdEw1R1EweWZjMDd6U0ZzVzdZenJwa0wtRE80dW1rUGxoWUZRY0pTMHBTeDdEeTA4OFd1dzhTdjBLQWlmSW41dGxFbEJhRlczR2NHTTVWTEtCb211d0Y?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:1.4s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>立報傳媒</div>
+    <div class="news-date">2026-01-23</div>
+  </div>
+  <h3 class="news-title">教師壓力與孩子安全怎麼兼顧　國教盟：制度要更好不是更少</h3>
+  <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE12ZS14WF9ScHhrZ05OTl8yYTdrVkFwM3B5Rk53d1NaZUw4cVA1WFJYV0JjZlJvRUpYVmhQVWNjV3NnZncxUTRTSdIBSEFVX3lxTE12ZS14WF9ScHhrZ05OTl8yYTdrVkFwM3B5Rk53d1NaZUw4cVA1WFJYV0JjZlJvRUpYVmhQVWNjV3NnZncxUTRTSQ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:1.5s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>客新聞 HakkaNews</div>
+    <div class="news-date">2025-10-20</div>
+  </div>
+  <h3 class="news-title">國教盟籲媒體識讀納課綱 教育部：已列核心素養</h3>
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE02RkNweVRyUUw1QzUzTkM0LXU0RzNYX0dwS0NvLXo3NUw2akFqQ2NvcDIwTktuWV9XVGxZOGx3WWdsTFJGNDB4ek5vUXo5R080?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:1.6s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>peopo.org</div>
+    <div class="news-date">2025-12-17</div>
+  </div>
+  <h3 class="news-title">新興毒品快速變形 毒駕年增8倍 國教盟：兩層式檢測對抗新興毒品</h3>
+  <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9kUW43WHVia2xhbDFmRVBwUFFLZS1raUhLeWlfUW5qODgyZjhtU2lFVk9mRU5yc1p2Y0piSW9PZzVJdmRwRUtqRw?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:1.7s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2026-03-13</div>
+  </div>
+  <h3 class="news-title">新北校園割頸案被害人家屬呼籲修少事法 國教盟發聲明支持</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE9zNENYcGRBRVZWOURlNWlHSThiM1VuaWxHelJNQTRVUXBQbFNENVBpbExoV0hqTlNYTUJOcDZoS041MWtlbVBqWm9mZi1kWWJkVkhTQjNqNEhxTmdyZGN0eDluSlnSAWpBVV95cUxOU3BvM2NmUGN4Ty1FMDM0SW1RbkN1bllhNmJtUkVfUDFZVWd1a1NCQmxNZ1pkUG9iMjZpLU12MWRCQ3AwMVVEOVN5TXV1bUlMWmlIVjFJczNBVzd0SHU3a3dtMkFWU0lQdGp3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:1.8s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2026-02-02</div>
+  </div>
+  <h3 class="news-title">孩子手機成犯罪現場？ 國教盟： 性影像申訴暴增、教材破口浮現</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFBnYXBRNDhNYUhyWmFma0YzZWZzLXRMQS1qd3IzZGdhQmFZY1NTbHJRWEJvd1FCc1VfNk02OHIxdkZfMjI5WlZnSWVKa0tTLUYySUU1WUlaRGZoMlY0bUtVaHhvMnjSAWpBVV95cUxPUWtZWVFEcjVCUzAtMDBTM0p0NFpOa0lQdWtiS1NHYkR1VHdtSVdIcGIzYzRhRUxZN1RRbklOMXVaZHd3b05ZZDBTYzQ4VE05enB3WGhIeG9WOHBFTVZLM2JWZTVSdUhic093?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:1.9s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由健康網</div>
+    <div class="news-date">2025-12-13</div>
+  </div>
+  <h3 class="news-title">國教盟等團體推「神經多樣性」正名 9成民眾支持撕下污名化標籤</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1QeUZWRnQ0R05GY0oxRG9PdWpJYWt0Q3BZX19FYThiRC1rY1NoRkFEQms3d3FLQkJDLXZkSkxFbG80SUdQRHlULWdwR0o0OGtTSklCZmZZVUVOOFdWTWVCVHlfTk3SAWpBVV95cUxNQ3pnaVA0ZXVOc0dTLTVyNXJjcGpoTWVEWlV2bFZPQ2R0TlFpbXhFODVrSGpVOXJ6SnVzei1hcXJXNWNkQV9paUZwT3ZQSi1Da3AzYzluMXVkcXN0SE9RNUF1bWcxWEpLT05n?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:2.0s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>聯合新聞網</div>
+    <div class="news-date">2025-11-17</div>
+  </div>
+  <h3 class="news-title">改善青少年藥癮問題 國教盟籲強化校園與輔導體系</h3>
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9RdlA0MnZrS05uVHlTbEx1OWVtV1JyS09rQ3lBZjEyZC04NERSa0Y5RXplbkd4WmdxWmZfUk9WOUZ0Z1RudEVRZTdNSFd3bzdZ0gFWQVVfeXFMUG5MaXNqVkRlbzc3X0tFelpGbHZidWxIQjYxZ3FWQVFWYmdvVUI5MElLaGlqZnRsTVl1Z3VoNHNibFpqQ1pEeGpYZFd5cUxPaTZ1ZG91Mnc?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:2.1s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>peopo.org</div>
+    <div class="news-date">2025-11-17</div>
+  </div>
+  <h3 class="news-title">國教盟青年部呼籲全面禁止加味加熱菸</h3>
+  <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE5rc1hmRy05RW5JOHYzSjItMHZ1bzBFc3dHZDV2d2E3SklycTNCQmN2UjdxN0RXUDhmVlFHSm5LVllORm40ekI5Qg?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:2.2s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2026-01-13</div>
+  </div>
+  <h3 class="news-title">教育部拍板校事會議改革 全家盟和國教盟高度肯定</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5yWWRVdTZtWkJ6VFRGcGp1UnQ3SW1kcU9uUGJaTU5oSEpBakkwTkN2SkF0Zjh4dzdLZ1RjR0hneEVTWi05eWtUaHdWU2ppZGVrNGRRcmphRFRVZ0FzckpTVjdVQmXSAWpBVV95cUxPZmsxNkFxOGRwV0E1V3Bjdm8zdW1MX2V3MnRvZUN0VW85VUdjQmI4RUVDYnZvbl93cnVadHNPYjExbllnMFNVZDZTUzV5UWdpVnBCNFptcW5jRE5FMnFBR0VZWTYyVXVlRkdn?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:2.3s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>聯合新聞網</div>
+    <div class="news-date">2025-12-08</div>
+  </div>
+  <h3 class="news-title">性暴力被害者一半以上是未成年人 國教盟呼籲教育部補上保護課</h3>
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1TVEl6NHpNNHVyZWZkWllNQjI5eFI5bkg1WEhBUm5nNkFFbUZCWHJadDFCZTNMRTFvb09YZDdEaTlOb1BzYzhQX21xX1VrQ0ph0gFWQVVfeXFMUDhLNEREUVFMelA0SnJ4TzJGTVd1QTBiVkU0c1VLS0tZS0x5RDZ5c3pVdXVGRVljV2pwRjlqRnJ4a1poVXZSUHFMNVJvZEg2TEd0RXhGSFE?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:2.4s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>聯合新聞網</div>
+    <div class="news-date">2026-01-23</div>
+  </div>
+  <h3 class="news-title">抗議校事會議 教師25日上街頭 國教盟：應修制度不廢制度</h3>
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE5xcG5TbWxyYnRLQUZvaGRKVUZGdU55eGxVUDVyUVo4SldlcGc0NzVETFRNLWY3OUY0MkpJY1Exa1BTc1M5c2JSSE12bEN1RjhX0gFWQVVfeXFMTXJiV2RxSmJOUWgwSDdCQnRCY3FMeHAzb3VGVllEeUUwSmxBUFZXZ2VuMlpJZGlwZUx2d0psMVBYY1QtcS13cEZuWDlvRjV2R0tJeVVnS3c?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:2.5s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>中央社 CNA</div>
+    <div class="news-date">2025-10-20</div>
+  </div>
+  <h3 class="news-title">媒體識讀／國教盟籲媒體識讀納課綱教部：已列核心素養| 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9vd2M5dTBuaUlLZzNvY19yY1NsTnc3T0dfUWhURHZTSElKN1YwT2ZhNGVwUENBM0tUYm9sUkNoUldPeERPbzJhMy1rVFFwZEhnMUZ1WjZKWVYxbmc0dW1z?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:2.6s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>rti.org.tw</div>
+    <div class="news-date">2026-01-23</div>
+  </div>
+  <h3 class="news-title">教師1/25抗議校事會議 國教盟：修制度不廢制度</h3>
+  <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE5MUV9ETEtVTzd5R1JmdE1iVW5MVVE1M2NONVVqbmRGV2FuUDhGXzBNejhrdm1ocDY4djNlZzRNY0xBM1NzemhmMEZvVE56NTVwTHF1eDduNA?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:2.7s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>工商時報</div>
+    <div class="news-date">2025-12-05</div>
+  </div>
+  <h3 class="news-title">青少年自殺通報9年增3.3倍國教盟籲實施例行篩檢與早期介入- 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBCTk1YMEpMWk9TRkwwcFBqVEtWT0tnOTVfM0VWZ21nOEI5enZvTDMwWU43NlNaN0xOTzZCMWJnYnFkZXBBa3pJSGdiSU9tWjJwYTR0RElNa0dYal9FS09Z?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:2.8s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2026-01-09</div>
+  </div>
+  <h3 class="news-title">多縣市營養午餐免費 國教盟：缺配套恐增加浪費</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE8wXzg1V0RfZHZMbXlQQ2Y1SWR1Y0poWnNGNHI4bHZmVDYyT2Y2UHExZ1l5SHRwTUx5Y1ZyZXJyOWZCV1k5NWNFZnVCM2dXekZEVVdyNkpnTTBXRXdUcEtWUkk2VGbSAWpBVV95cUxQSzhaUFR0MFA5Y211djNKR3VNZTBZTkg0bEVrRnpWeEFZelkyaWdJbExGd2MyZVRPVkxiVFFzNUZwODd2WnV3ZkxDZWtCVTZqcW12NDlpSjNoclhwdUdyRUlmWTFvblozMjh3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:2.9s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>聯合新聞網</div>
+    <div class="news-date">2026-01-13</div>
+  </div>
+  <h3 class="news-title">校園割頸案非偶發 國教盟提跨部會風險分級防悲劇再現</h3>
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFBkcmZzMDBTMk5hUmJydDVFSTlEX1A2c2kwUDZhLVdNRGI4Qm9TVWRRWGs1TWY4MHNzclJ4eVdFMG1leTMzbUpVUGZSTjFYVlRN0gFWQVVfeXFMTXV6bmo0ZlBFSkZSb0NzdWFQV3BYMzZBckdmTlpEQ09GV2otZkFYWjRkcG1iYVZKWHlxWHIwRWtfTktlV2oyYUs5RE1uOTFpd1JNQ2lySmc?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:3.0s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>工商時報</div>
+    <div class="news-date">2026-01-23</div>
+  </div>
+  <h3 class="news-title">憂校事會議「大案小辦」傷害孩子國教盟：修制度、不廢制度- 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE90UUN5RHMtQ2R5eGpfczFWaHBiRlRWYmtMQWxZdnFQVTUzYjlRMEdkdHpBb2RMOXZNSWlMejlsZktnVzBEWjM5c1pMbWdNQ1dtMUg1S0I1TG11MXl0S1Bz?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:3.1s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-12-09</div>
+  </div>
+  <h3 class="news-title">教育部攜手衛福部設「青少年性教育平台」 國教盟：重要起點</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE55c0NVYks4LW9FNjd5WTBmZ19VeEh3X05PWjA4RjVERnZNTnhKcHIwQ09nT28zZWh5cEdjSlllaXVuQjlJbTM1c19WVUIwRVRsTERaMk83Ny12Qmk2RHBIWjZrV2nSAWpBVV95cUxQd1d2ZVpIYUVpX3JNd3gyeTlma0dsRDV5NXBaNWhWMm5TRXZoX25fQlFhRzQtWVN2UkN2dmZYNjZUbFJJb2lIRUhwSGs0Wml6ZVRhajZSRTFONVFBYnVKWklxQkdmWG5WTHNn?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:3.2s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>聯合新聞網</div>
+    <div class="news-date">2026-01-13</div>
+  </div>
+  <h3 class="news-title">割頸案二審改判 國教盟指制度漏接、別讓師生安全「靠運氣」</h3>
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9vcEtBS2dwRzQyeFZpVzFZa0pTOFM5TWwxWnZaUTYxNEY1Y01kaG4tZnBFMExTT215Qm8zUTU1UjFhamNacVR3dllZTml5QTBT0gFWQVVfeXFMTWVpazBpeHhpUVltd0tkNXA3Z0lBTmdnSW1ZTmNSNmprUXdDN1RtQmd1X1RGTGY5RktBTkVheGszeVJOcklZek1XM3ZKbEFJNjNzNW03Mnc?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:3.3s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-12-08</div>
+  </div>
+  <h3 class="news-title">性暴力被害者一半以上未成年 國教盟籲政院設立友善求助平台</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE13OWpQTXZiVHZnQ3NWWksyekVGa2JVNmRGNmMyQmdlWlExbzVqaXgwSE9aOXl0eFVScTdWNk81VWlfM0xuRTB5emNWajd3bUlRUTMxZlQ4MzMyUk9xdTlycmxLWHlpUEHSAWxBVV95cUxPV2VoOHlFTUlGUGV3cC03TGhyQXYzUUFPVTBtUVdjX3VudGZCcWdxcFhZYkRlanI5Z2dWSFI1d051UGFsQmVVYmZaXzVIbGJHVmh6R0o1WjFNd0dubkR4M0dlNFdrdEZLd01pVmo?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:3.4s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由健康網</div>
+    <div class="news-date">2025-10-20</div>
+  </div>
+  <h3 class="news-title">石崇良帶隊稽查違規加熱菸 國教盟給予高度肯定</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1zcVNyRHY1VVgxdi1MczNMOUFmXzItY2NkdjVlci1rUXpVWVUyZF9nQ0FKblhFTGQ1eVlROFhGSmZpRl82OW5OTHNhbjhIU2pONTdnaE5UYVpVb3ZDRS1obHFrb23SAWpBVV95cUxQVk1jRFppc1NYMUdDU2N2UGE4UTNseUlUREUtdS1JdWdTeEVhNGtCc294YTV1U2lCWjlFVlJOVVhGTXpuQzBlMXFGVlhwTUxnaER5aFQ5ZEhCQ1poZTlZWUVTaEZFN3lHb19n?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:3.5s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>聯合新聞網</div>
+    <div class="news-date">2025-11-20</div>
+  </div>
+  <h3 class="news-title">「賓賓哥」國中校園直播惹議 國教盟：侵害兒少隱私與安全</h3>
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFA2SHR2Q3N5WkhJS3YtLUl2MzFqSTI1WVEwRTFUTS0xRGFZWWpFeFV6VzE2MWV3N0E0TVZhbUdVSUdOcEk0NEF5VFp4a0RWRkJm0gFWQVVfeXFMT3gzbk5MUU9Ka3p5TnktZFBxRUdhR0lIekYwckVQOTBMWWxwQmlmRWZtN3UtaTRmcXVNX1ZPUWd3TkRsQzZWaDM0Y3RVSWlCeFByX3Z6YUE?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:3.6s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>工商時報</div>
+    <div class="news-date">2025-08-28</div>
+  </div>
+  <h3 class="news-title">新閣員上任！國教盟提3訴求早療、體育、實習生全上榜- 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE1mQ0RIcUZ1aHJfSlJGLTIzZ3ZKSWFJUVB0U2ZYZ1hlWFgyRERhejlBdktNRGUzSkZGMl96NXduTFNXdUFZeGxLa3lHeU9Pd2VfenE2Mkx2d0dnd3dmazVz?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:3.7s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>台灣大紀元</div>
+    <div class="news-date">2025-10-20</div>
+  </div>
+  <h3 class="news-title">青少年遭網路詐騙頻傳 國教盟籲媒體識讀納課綱</h3>
+  <a href="https://news.google.com/rss/articles/CBMi0wJBVV95cUxQVFJkOHNZMUNhMi1yRVBMZzZlR1ZBNDRHNS10MmpYcUIyeXU1eGs0S2pMVVJXSlpFdklCQmw0d0VPb0ZqN3p5V050TUFNSWxmMUtlVWlXTTA1UjNabWtBREN4VFNHdV9wdWgyN3lpeVBudkd3RXlCeFgtWWQ1V0lMbmpxTEk5OVFkLThSZExiUkxVbDI4OUJneVNNbFBXdmlRNjk5RWdLcUpuLTlFSUZqQmxyRnhPU0xDUFM3R215ZkFiaTJBeGhqd0NzbzlCZWVzM29TcHpUN1lDT3dtOWtCNDc5UWdHM0NfWHBESnoycmVpWDV4M1JtN281S2FDSXJrTGFxMFhlaWhnLUFSOV80WXQyZXJPVVVpZEJNNkM0ejZoZ3lTLVFuajZGNW9aVEJqamFqZWxQZFQtZUJOWXRPUjNwRldtdmZkUHAtalJMM1pQQnc?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:3.8s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-10-20</div>
+  </div>
+  <h3 class="news-title">AI生成假訊息難分辨 國教盟呼籲政府正視</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE9hSDJ3d01HQm4xcUZ1UDVPTTlleW82SHYzTnZPcnhobFhLZHFwcWRRemVnOU95eDdydjJpdGlja1NlVzBwNGFBMDdfbWdCRlhlclZxZXRqandhTndrUmljbXVTRDfSAWpBVV95cUxOSXQzMlY1b1JINzd6dkJEdzl6OHpEOVpicG8xUldJRE04ZnhFeWhCR1ozeF9MQzhZS240TXhrOWYxTmRkNXVqMlNOUURWS3kzeHdJSnBweWZtVlU2ZEUxdHlhdDhmUkpSY05B?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:3.9s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2026-01-13</div>
+  </div>
+  <h3 class="news-title">新北市割喉案多判3年 國教盟籲建立跨部會風險評估</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1jMTV0N2NkSU5VYUN2MWZOMmxPLS1tV2pkSG04dTBTeVQtWkM3b1FiMV9wUUxPcmY2djlkd01qV1V4YXM5SFhUckVlNXRlYjV5bERMRHZ6OXRKaEtVTWxxaWRhaW_SAWpBVV95cUxOX0dsLTFpMmVkT0JtVmk3WFdMLV9GM053Si1TVk5LWUxWVXBtdjRtc2lpdGxEeGVoMS1qRWp1bEl4dnlOUEwxcW9GTVotTnlNcXl4aXYxdFRqcEtGd1cyM2k3eHJJUGtMU2Jn?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:4.0s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>太報 TaiSounds</div>
+    <div class="news-date">2026-01-23</div>
+  </div>
+  <h3 class="news-title">全教總周日上街促廢校事會議國教盟、全家盟反對：可修不可廢| 教育</h3>
+  <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE0ySFA2OEdhRjNZa0Nwb1JsdF9GU2ZuVTZORVVnblVvTWN0TGZidjl6Uk1va09MQW5IdTFudHBKM1R0SXQxODNDZVJyeDhhY280aUdpa19TRk9kRTFP?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:4.1s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>客新聞 HakkaNews</div>
+    <div class="news-date">2025-12-05</div>
+  </div>
+  <h3 class="news-title">青少年自殺通報量增 國教盟籲早期辨識與介入</h3>
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFBjVTVIS1VVS1E3TmV5cXFiN3JYSDRMdjZyNGo4bEpnN3FGUG0ySzh6QmhXUm1JaFRPZHV2Y1lfQ0w3a2FTYmlUeHloOTVHVnFq?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:4.2s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>公視新聞網PNN</div>
+    <div class="news-date">2025-12-08</div>
+  </div>
+  <h3 class="news-title">上半年性侵受害者逾半未成年 國教盟籲課程納保護課</h3>
+  <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFA2dTJlYTNMenNnU3RlTFRic3RaLW1QT1Y4N0VtNk9rWWlobnoxVFFTQjMyN3UwZVExeGVGVlZ0NGViTFk4OUZkSlVvVzVFNTg?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:4.3s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-11-17</div>
+  </div>
+  <h3 class="news-title">賴清德宣布成立「兒家署」 國教盟等民團肯定籲未來升兒少家庭部</h3>
+  <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE5vdkpmd3BPOEcwTVVxYTBUTk1iVDFNZjFkMHIyZ004TjVNR0h1em5lcGhMSUdTU0wydy1iMExwa19YWUk5TVhkZW5HT2lPZTh5N3pZOHNvd19YbXVZUVFPNEF3akVSRWN5X3fSAW9BVV95cUxOTjBQd1lyVHhxemN4dm9xaHhGQmpXS1ZfbXVnVDFvTWxGMFZUTTlPeGoxQWZEMEJlbXVnN2VsQldqcVNIS2JTOEhFYVBnM29mV0t1VHUwRDBKNmZzTUNSdG5sSWUwNWhlUWVGZHBTM0U?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:4.4s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>大紀元新聞網</div>
+    <div class="news-date">2025-10-20</div>
+  </div>
+  <h3 class="news-title">青少年遭網路詐騙頻傳 國教盟提三呼籲</h3>
+  <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTFAtNmt6eVZGaU9WaWVNWnBOT1NVQ1VReG4yQnhwRll5YVBwM3VETWFTUEo2RG9qQ0tmWkFtMzhlNkZhc0w1a29uSy1saXF5Sjcxak9qQldYWExGNk1BQ0dlYXl30gFnQVVfeXFMUG9paGdER3lnT2pIenBzU1VnazZweVI1WFFBeW1wcklEbjE1MmF0WXZWQ0VJcF9TT1diUmtheG90UGhPTXppRnhTZHM5OUNrZ3FVQ1kwUWhUMXdybFN0eVNkTUxaNE1IRQ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:4.5s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2026-01-23</div>
+  </div>
+  <h3 class="news-title">全教總週日上街要求廢校事會議 國教盟：可修不可廢</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5XdW5zYmJMODZEQjZjZVllTTM0UHVYOUQ0eFc3VHBvRUROQ3dLdUdkd3IxbTdBY295dDhoalJCRGNMVjBwdFpDNXNnSUtCV2U3akUxU0NOMjZhTXh1S0NSOXhXcGfSAWpBVV95cUxPNVEyZVo3SG56ZWFwVU85RkZNUllCRjdicFAzRkhmTzNYVG50WG5fOG5jeVczaWpEOFpUUmUxVFhwbE1zY3M3bUhiLUN0S09ac21Fb1o1LUM3OWlvYVNhTVJHUWVTeWpOdlJ3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:4.6s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-10-20</div>
+  </div>
+  <h3 class="news-title">回應國教盟憂心 教育部：科技資訊與媒體素養已融入12年國教學習</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE9yRDEwQnpERENoUUdmT25zS3RJTjBURERCMUo2QzlhaC1hWXFqd0NFTVRRcDkyeXdsQVA1RXNpZWZKcU53VjRKRGZyc3pVMTVBaTZHVTVrOGVKRFM0SzF2X0J2UWjSAWpBVV95cUxOTjl0c0ZFVVhnWG1rcmttdGt1TGlaa2FIbjRXU3hYVS1tQUlDTVdhOHQtdzBnczFyZ3c3SjJzMXg3SWtJRGZ3M2k0ZVlHWTQ4Vm5uMGwzWG9XMzVNSmd3SEZITF9VMUdiYUZB?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:4.7s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>大紀元新聞網</div>
+    <div class="news-date">2026-01-13</div>
+  </div>
+  <h3 class="news-title">新北割頸案判決爭議 國教盟提制度存三破口</h3>
+  <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE1YdU9xZldveEpxWjdWdHhyMUdaZ181WGZIYmlrNEgtSW91a2tYbmJuQU1TaEVFY3ctRVJWMlJLRkVwNDlBbVktenk2UThXN2lVbVdOaml4elRsVnQ4TnhhYtIBZkFVX3lxTE5jYzhDZ3ZQS3JrODJhNEVNM3kzQ2s1R05MelNydksyOExybGdHR0NnRzUtdkFFSmRKQjJRY09xZUZobjBHaUZ2Vk11dTI5MXhxRjlaUTBJRDljMFU0UnAxSkhmczBUQQ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:4.8s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>ETtoday新聞雲</div>
+    <div class="news-date">2025-12-08</div>
+  </div>
+  <h3 class="news-title">女高中生遭同學性暴力、偷拍　國教盟揭開青少年求救困境</h3>
+  <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBpSGp4QU1fZEI0VUhpTldpbVRLelRRNFB3eVZiSHlmdG5URmo5THd3bk0zRjlXaHhzQmQ3RThST2lpck1nbFVaNU9aYWVUanp1Sk9VZnVGd19oWE9nbGfSAWhBVV95cUxQZWpHc0tWaFpsSVlKQjRmMmJFMGNhWVhVYzBmblhnVFBtbVotanA4MmV4TkpzM1pmRklKaFBTVXRaUVdKM2FNOU96NWUyV2JaRk9GbWJVSFJudGswd3E2LUlGTlYwQVdxMQ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:4.9s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>聯合新聞網</div>
+    <div class="news-date">2025-12-16</div>
+  </div>
+  <h3 class="news-title">桃園喪屍煙彈事件送驗陰性 國教盟：仍是新型毒品警訊</h3>
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE1SckhSVlVfZjl2a3RRcDRCZHFuN0tybTlGOXdvc25adE9fZEpfcDVVMjhhRE5QMWwyZGZZY0NIbENSMUtpMDVkSDNxUE1WcXhf0gFWQVVfeXFMT2xCNmZEX0NfcDBiVVdsUUpUay1lZi1ZN3Izc1Fsd0ZKOWVxci1mRVp1eE53NWhSNG5SenlYRWNJdmV1SFY3S1E4eGVCUlFMYkV1TjQ5MkE?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:5.0s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-12-08</div>
+  </div>
+  <h3 class="news-title">回應國教盟 教育部與衛福部共同成立青少年性教育平台</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE8zdldKSHRSQlJDT19sNUoxOExZdG5EVERNd0FxM3VTZmh2em84NFpTLUN6WjFaVTZ2VU00ODRlMVgyWXVaWUsxNVo3a0RpUndWZktQMzlJWkkwdWdIYUp1UWc1NGPSAWpBVV95cUxNcmpyNkZUdTJOVTNrUjdXYkVpYVVHYWRZZUctenVHaXdyNUJjVFRBT0F1Sndwbjd4QzBmekNjZlItcEdSUzRNSENRV3daY3hmenp0M2pqT2NEWFg5ZmhRZ1JTaFg3ZUFYTk1B?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:5.1s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>peopo.org</div>
+    <div class="news-date">2025-10-24</div>
+  </div>
+  <h3 class="news-title">第二家日本菸草公司製造銷售加熱菸也違法展示?國教行動聯盟向國健署檢舉重申任何菸品、加熱菸載具皆不得以任何形式廣告宣傳</h3>
+  <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTFBwNnpyVU92T2IxdWZpZWwwY2dicy1LX3k3WFhxSHNuNnAyR3pOOUtqWDM3U2JKYzN1V0c5Vnl0V1l2N2xOSXVwYw?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:5.2s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>三立新聞網SETN.com</div>
+    <div class="news-date">2025-09-15</div>
+  </div>
+  <h3 class="news-title">國高中10點上學連署達門檻！國教盟曝「暗藏2隱憂」：難以落實</h3>
+  <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5YSXJnUkRLNzBxdkxLR3NaWmd0bE1Md0k4T0pFbXFnS0tKRnNtSHYxUzI3YVpZZDBVTXNGbVNyZkQ5NGJuQUhDQnFSd1lWWF8tQ3BnRURmLTnSAV9BVV95cUxPVEZRcGlWclZXMnY0OVZjMzIyT1d6eE05Z1daX1kyVktiRmNtUUxkLXQ1NmVmblR6VTlEMEpCRXJlT2JfYnhwakxIZDBpa3o1QUZCSHZTN0JRbTVHYnJicw?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:5.3s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-11-17</div>
+  </div>
+  <h3 class="news-title">質疑是毒品滲透工具 國教盟青年部呼籲全面禁止加味加熱菸</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9iclBDR3FGUm5VZ1JOdld6S2N2VHNocHE3U2JzZk5MVzhXMjd5YldzeVFwYUc4MUxGU3hkVXlVWWNUc25pbUdCTWVRYU54U3FydlluSTVuMFYxeGxSdi0tOXZ2Y1R5d3PSAWxBVV95cUxPU0gwSXIzOEJIY2ZWci0ydHUzTDl4RWtfdDFRRTB2bmQwTFNnXzM5RkpsQ2JnanNtSnh4aWRtMkZlTmFVNmNaVDBWaTdmMlBZbDA1N2trbUhfV1ZPUHd0aTZCSUYzakRQbi13M0g?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:5.4s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>聯合新聞網</div>
+    <div class="news-date">2025-08-28</div>
+  </div>
+  <h3 class="news-title">內閣小幅度改組 國教盟針對李洋等3名新閣員提3點期待</h3>
+  <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1QSEp6aVNVN1ZYcGU1NC1QVHhtUWpFbHhsN0FjeE84RHc4RTFwQ3RTRFF1SkJjZi11Wk05aUd6YUNDT3ZDUHdCSXkxOUJWejFiWUpF0gFYQVVfeXFMT1hFYTUxM2V6Q3J0VUlrZEdGeU5DR1dhYVV0ZjNTOXlTaGd1U0FtdnoxTlVJSXFtTkpCRTNtTGJsV2hNaDVzVXdnQmxfT2NkUU5RM0oyZ1B3Rg?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:5.5s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>中時新聞網</div>
+    <div class="news-date">2026-01-15</div>
+  </div>
+  <h3 class="news-title">國教盟：人工生殖修法 衝擊健保、早療資源</h3>
+  <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE15WGVIRE0tdlFjd3liZGEtOUdseFNhTzNiVlQwVndsbzVZQXcyTlUtZVVvZWprUjkzUEVFZ2VJaU15SDcwSW9FQWhQcXZlS29meWc4dzdxUmEybThXdTM3bmFJNXpNWTdjM3JZ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:5.6s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>經濟日報</div>
+    <div class="news-date">2026-01-09</div>
+  </div>
+  <h3 class="news-title">縣市紛推學校午餐免費　國教盟憂品質降、浪費增</h3>
+  <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBtVkpNXzQxbDBDbmJBd0dsbmZUWUZuTUd1MElrODZ4ZUxrdFRKMjcteE96U25wNWxRTjlBSC1tWW0xbUpHcnhfU0g1VFZRNWlyVExuQmI1YUNWUdIBX0FVX3lxTFBFaEZpMGxRZnMzWktiM0p2cUcxMTZWLXZpSUJyWUlLVFRvYUZ6QXo5aS1kbjJiWkREXzVZRDQyWEg0ZzVUWGt0c2VHQjBEYlhjQ190UkJHTGtJVktTckt3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:5.7s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>Yahoo新聞</div>
+    <div class="news-date">2025-09-02</div>
+  </div>
+  <h3 class="news-title">割頸案2年後》少年法官缺席、社工不貼身 國教盟籲教育、衛福部補少年保護5大缺口</h3>
+  <a href="https://news.google.com/rss/articles/CBMi5wNBVV95cUxQZW03dnI1bUpqeEF1ZGpfSGp4eHNiREx2cmRhUG9YdUtzMGROdWh1Z2Fhb0w5SWZwZGkxYXlBN3B4ZWhEMVdVaUVPeTBJdWJRUXlkYnJydTdwdlVEajZqY2JlUHVJZjhLNWp3eFBhMGFVWWdVMFlYTkh6bExIMk8wWGlXX0NnWkhoOHM0Nm02RlJRS0dsc3Y3TWhKdktpbWFaVFZyNlVkbmM3TjRDNDFoYVJ1VWtLOTBXSHJYVTFMbkNFMzJXay1yNmdHS3pzWkl6OE9oZ2hkc3VhSS1kSjQxdVBpOE85Y3NPNHMwcW1DaUNzLUF2cnR2bnNxQTlWWndHb3o5cFdQTHZFeDUyRlIzV1FKd0pYSkk5S0JKT0ROOUJxLTlpd3RyeDFTdTFkbUIwdG4xLXNkLW1XelhpQklSYlFjUjdMRTBTR1dlRzkyVGxUS2R2ajBkQ1dETDMxNG9scVlyX2pxR3BrNDQ3N3REQlA5azltek91UlR1cGxrUk9fZ2xYaGFwT25wd0pGdU9Ta0xteFhFc1VKeHpSU3JPQW5SSy1uMnBUdlp5VlZLMHVGSS0tSWxRLXVOVmR6LVZ1b25hLXA2U0FXUUdkb2dDejRpaFZIQzZ4QUVXTFdHX2dHdHpfeEs0?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:5.8s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>公視新聞網PNN</div>
+    <div class="news-date">2026-01-13</div>
+  </div>
+  <h3 class="news-title">割頸案高檢署認判太輕提上訴 國教盟籲將風險評估制度化</h3>
+  <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE04MHJ2amx1aXFDY1lSMlBqOWxIN25CbzFYam5lb3lqbG5BRS15OG1VS3Q3dWstaEI5MS1xTzd5R0ZNWkhMd29zbXhLNVAxOUE?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:5.9s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>工商時報</div>
+    <div class="news-date">2025-11-20</div>
+  </div>
+  <h3 class="news-title">國際兒童人權日！國教盟籲：校園直播需尊重兒少權利與保護程序- 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFAwSlFybTFrekJvMGFjMWN4UHZXdjBuZGR2NDMxbl9QLVJxREppM21wVUZzZHFhUnJ2MUNnMzItSWNtVUV5aWt2SmdmTGZiVEt6UjZ0Q3AtUDhuVUcyeG5v?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:6.0s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>中央社 CNA</div>
+    <div class="news-date">2025-11-20</div>
+  </div>
+  <h3 class="news-title">網紅賓賓哥校園直播惹議國教盟：未成年不該是素材| 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBUQW9XUGZ3VDBWMWNQbUdKREEwbXRwTW44emh2U0lVaUNqR2xBMkxXbWhhdUMzZkpmVWFBRThiNExYWDRxUFpoRUR0OThrRmdtWGtDYlY4NXBfNzBwSUxr?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:6.1s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>MSN</div>
+    <div class="news-date">2026-01-10</div>
+  </div>
+  <h3 class="news-title">縣市推免費營養午餐 國教盟籲應有配套政策</h3>
+  <a href="https://news.google.com/rss/articles/CBMixwJBVV95cUxOVTR2WExpVlRaZ1VEZXdvN2xZYTFJTlNobmpQOEwtaG92Y3gyNEo0blVXd1JxTDdhYTdERjNESks1MUtHMERENmJDZHFndXNONmEyNG9WUDRRSC1TR0l2djV4b1NhSUwzUTg0SFI0dTJibDRpYmQxcXNJdVFxVTFHaW5IVXdVdUlGcmViZlNNTlZaQS1nWFI0cjF2bThoRU5CaXZFUTFnTmlzSGZtYjRvU3N0dEdqMzk3cUF3em1YX2wtM0hxT0Y0VWhsdURJcWxEVTRXZzJtZW03eV9FMmNvdUw4elNYR3JrZDJXbjlYWnh2dmRKbWNGU1RZdHFIc2RuaXZWRGdvbXlMbWtQZUFpcmdsbUNoZUVPZFdfU25hekJNZ19FS3pBMnVSbVA0MmZ2R3dKQ3EzV1YzdDdUemZ6T09MYWEtdG8?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:6.2s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>大紀元新聞網</div>
+    <div class="news-date">2025-12-08</div>
+  </div>
+  <h3 class="news-title">性暴力求助難 國教盟籲政府設立友善求助平台</h3>
+  <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE1iOXMxZGFYTXVCamR5WUlnVjdBNWRwbENVaXV1b25zSzJaVXlIZHI5bi00blctT245aDZKYWpEMmQ0YlcxTVBWN3FtWVA2blZGbU02Wkg0bWNHN0NZOUc0bdIBZkFVX3lxTE5fXzIxTHhwRDZYUWItaG9ObGRObFMxVW5TV2xULUM3QjhWT2U4OXVnRXIzS1FObFVmQm4yaVQwbU5qekQ2OFRuZDlCQjhXRm5xallFY1RhZXJNV3pEWFZrRTdMTFdEUQ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:6.3s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>公視新聞網PNN</div>
+    <div class="news-date">2025-12-10</div>
+  </div>
+  <h3 class="news-title">桃園國中生疑課堂吸喪屍煙彈 國教盟：毒品滲入校園破口擴大</h3>
+  <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1tbk9GTk1lNUltdzBURV9ldTdzRXhsdjRJVVpSNGlBbnFGcHozb2REZm0tdkVIeVZLdGJVMzhlLU51XzlvR29tWVhpMHdWU0E?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:6.4s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>聯合新聞網</div>
+    <div class="news-date">2026-01-05</div>
+  </div>
+  <h3 class="news-title">教師解聘辦法修正 國教盟：支持修法方向、籲調查分流</h3>
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE5GY0R3YWNPWEFST09TRjhncXlwVXc4WWFsZDdZMEVhU21qVXN0YnBnQlV0Z0dRdzRwenNxc3p1dGNxLXBEWGxxWEowcFV1S3R30gFWQVVfeXFMUFhJWDAweklCalFvNTBOQ2dQb3VpaTgxcWJlT0loUTFJa2lEc2FURXhzeGFqRkN5TENCTXRLVTdENzc5bTdHWl95V0t5V2hBSzRDT3VybWc?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:6.5s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>工商時報</div>
+    <div class="news-date">2025-12-08</div>
+  </div>
+  <h3 class="news-title">青少年的呼救！性騷擾居10大議題第3 國教盟：應補上保護課- 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBjM192X2lDMWpXMmJIeXlUM3NhZmk0Y2VacGdrbVF4UDRjeTBFNWx0aUx0dFJySk5NWC1VRFM4SC1MNFlJQmxrTVNDaUU0M3RNSWxlWTlMRFRmLXJLSVM4?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:6.6s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>Newtalk新聞</div>
+    <div class="news-date">2025-07-10</div>
+  </div>
+  <h3 class="news-title">建臺高中考科報錯23學生求助無門！國教盟籲大考中心：快啟動應變| 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBaZklwWmJ3ZGNiSFZCeFU1aU5pbXhHMWtpbEQ3ZS1DSnFCdm9Ud243SGNZSldaVlZFV2VOSUlLWllDZXc2NEJSckdYdllYcFptbWJZUXJZVmw4Zw?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:6.7s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>中央社 CNA</div>
+    <div class="news-date">2025-05-29</div>
+  </div>
+  <h3 class="news-title">青少年性病增國教盟：性教育不能只教器官和避孕| 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9NaFU1ampvUklDbzdoVXRRbTJvMTkzcGhjcFNRN1ROSmN2OC05azBuUjdxVDRDeG1lakZnRFVEWnA3aXdWOXdhb0JaR0thU0xyS2R6UGpGR1QwTXV1UmVZ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:6.8s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>聯合新聞網</div>
+    <div class="news-date">2025-11-13</div>
+  </div>
+  <h3 class="news-title">「網路詐騙通報查詢網3.0」上線 國教盟：學生根本不知道不會用</h3>
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTFBJUnYzTDlMZ21HeEU3ZXJjdTBEQ3Q5UXNjM3Fka1Q4N0JibHo2Z3VHaUJYeTlNLV9oa3V4MlBiek51d2JCb1IxUnByS3lvb25L0gFWQVVfeXFMT0JubnNyUGVIQ0lMTjdIT01TMWNRSXJ4aDJKaU8yeDRmZ1ZFVHJpNmhFR3BzSjY1NDd3S2NBSDFTc2g5emdTNTF0SW5MX0haOFhnNHExemc?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:6.9s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-11-22</div>
+  </div>
+  <h3 class="news-title">教育部修正校事會議 國教盟支持並提4項配套建議</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE53M1JZNzU4Yy1jZ2xGN3lpSEQ4OFVuMmF3SVN0U2JmYmhpb3Y5MXhpcTBtSmltYm9IeF8zbHR2VjBQS2Fma3RFYkg3c0djaGRTdU1ESGRlUDhEZDRKUXB1TnF6QUzSAWpBVV95cUxPTzJvRmFjdDVqXzlMbEVvOWFxRVdObTNBbDhfVmFGWURoUm9QRDJQc1RnOGpkUTJkN21vUHUxUmhVOUlHckg0ZHJDZFZ6VkQ4cGtQRHlFX2Fzc0xPSDEtNU9OMm9kOHdfNFpR?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:7.0s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>工商時報</div>
+    <div class="news-date">2025-09-26</div>
+  </div>
+  <h3 class="news-title">導師費凍漲13年、輔導無加給 國教盟籲正視行政減量 推2改革</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE5kYS1ZT2hDd28xYU94STJOQ0xfRTB3d0tMc1JfMnlBT2RJbF9xUFNOX2Z6QXFmbTNYRDVwcHBXZ2FpeEMtOGF1amlpaGp1eENPMjVfRlNpcUlDZ2Z5LXpV?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:7.1s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-12-24</div>
+  </div>
+  <h3 class="news-title">國中生割頸案刑期加重仍惹議 國教盟：少年重大暴力案量刑應透明可檢核</h3>
+  <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1tZUU2WlhXeDQtOUV4b2lKYTBqWFhBWFlUSUtFTWRLYTR5bHpqMHNkU1hya0tJVEZGb0tFOXhicjUzR1dhcjhIVEoxajNGcVNBWWJqTzFVYURPR0g2a1h4YS0yZ0lpbzhC0gFuQVVfeXFMTkE1RE03SEFENzFtNDIydUlFOTFhZkRoYjFQeXhud3NWdWk5OFVvOVliT0d2dGpXd2pTcmJqMDhjdHFQeWU4U3RpUi1DS2xlb1FiOFROWFRiWHBvSDJGMkNUbXNFOVVsa0N2TXU0bVE?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:7.2s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>知新聞</div>
+    <div class="news-date">2026-01-09</div>
+  </div>
+  <h3 class="news-title">免費營養午餐「不等於孩子吃更好」 國教盟籲3大配套：確保品質不打折</h3>
+  <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1KSE5maFR3dU81QXBoVjZ5UWhudzZMZVJNSnBkVklHRy1kc0RaX21sdFlOd0pxQWp4TDBnTVBZUmhqczZ5NXptQnpDakxVaFEtLXNxQVNtMi12bm1JeDY0clNOelJTaXNlY3d4QnQ2OA?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:7.3s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>中央社 CNA</div>
+    <div class="news-date">2025-12-16</div>
+  </div>
+  <h3 class="news-title">校園喪屍煙彈疑慮國教盟：檢測跟不上毒品變形| 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE5SS0RqQ29kLTNEWVlybnl6RkNRaFpodUtuRlNtZ0F0di04TXZwMzEwNVItRHFMNmpMRHBsaFRRdFlQUnVVamdHWDFldXptc2o4dFVDX0oyRWROTHliRGs0?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:7.4s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>peopo.org</div>
+    <div class="news-date">2025-10-20</div>
+  </div>
+  <h3 class="news-title">事實勝過帶風向：加熱菸首日下架政府執法、兒少優先國教盟與執法同一陣線：嚴辦違規與年輕化宣傳</h3>
+  <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE5BYnBVWHJlN1hSYVFrS0xBejdldldkSkNnb0dzcFdESWRmVGtwaGxlTzFldGIwZ1BvRmp1a3FVN3hmdVZaMWdCWg?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:7.5s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>民報</div>
+    <div class="news-date">2025-11-20</div>
+  </div>
+  <h3 class="news-title">網紅校園翻車！賓賓哥直播拍學生踩紅線 國教盟：未成年不該是素材</h3>
+  <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5vTWdfQmoxVlhXb2FWbS1ZalA5TzlJVlpFdDFiTHY2WTVFYlVoMFotNDlWbWhteTJrR05pRVdnTGpZaDhCZDVxdEduUUNseGRna29CaU5UamdSZi1Ra3pncXFzekJ0Zzk3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:7.6s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>工商時報</div>
+    <div class="news-date">2026-01-09</div>
+  </div>
+  <h3 class="news-title">免費營養午餐上路國教盟示警：免錢不等於吃得更好、學得更多- 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9BMmVBbjlvZk5HcmtqZThfWC01NjIxdkhaR0M5S3ZXaVpFMlpzejI3RzlEdmdILUZxN3FiSGZqNmVmRU9RLVBjSy1NWmFyeHZNOEtyWFZoSDV1dzNPT3NJ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:7.7s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-07-10</div>
+  </div>
+  <h3 class="news-title">建臺高中出包教務主任火速辭職 國教盟：超鐘點月薪逾10萬</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1UTGRqR3JqQ3pvOFZJQUJlazNoRF9POG1BRFZVYk9EU1dJb3FLRlM5TG0zYnZFRzlEM0ZKTldfV2pZcUFNNkhUMFI4T1BXOHVpaWRIM1FPS2kzS2s1UzZ3YkhOQ1LSAWpBVV95cUxOMzVqeHFRRHBjeGV6RWVSUXdOLTl4Ym5yd05CdWFpSzU0aGNxdUhoeERLaEhBUHBEMUIxSm83UW5Ec293U0pjRUVnMEd6OTk1Y2lUZjBiYlkwd3Y1eW55WDctQ1pGVzNLR25R?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:7.8s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-11-20</div>
+  </div>
+  <h3 class="news-title">網紅賓賓哥校園開直播引爭議 國教盟：籲政府訂規範保護兒少</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTFA0MldNTkxuNDFfVFdRZ19Ibkg0cUpZb3FvVjB0NHRUcEtzbjlycTBjanRaYzc0bTBlZkl3TE1wWXBxcGlKWHhBQWVoempLUXl6UFRtemJjNElFOTNxcF9LU1ZPTU_SAWpBVV95cUxPTWdXeUs4elJqM1cxdTZ3VDMzUlpkdDE0RDNTNkx3NXR2NVBZdDc2RWRCa2cyWkk0UnAtbmpXNER1UE5HNlBrS19WRHY0R2sxaGUyQnRyWklPV1phQnc2RHRHcXJ5U0xoWjR3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:7.9s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>大紀元新聞網</div>
+    <div class="news-date">2025-11-20</div>
+  </div>
+  <h3 class="news-title">賓賓哥校園開直播惹議 台國教盟：侵害兒少隱私與安全</h3>
+  <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE45NHhQU3lwREZueDgxdVNTdnRQd3d3SDgzdjc1eXlOTEJkdG9mT2taQUFGNVdWZXQ0d0JDa1h2UG5qekU0SDlwRE82N2ZlSGkyYjZtRmJfZ1JweGhjb09oWExB0gFnQVVfeXFMT0IteEx4UGZMR0NZNWtOLTVQRl9jc1ZZVGJyTW5oYkM1NlE2a0JlX0hGRXREOEgxR0pNdUxWS3llX1ExMnBIZV9Td1o2cGRHUXctRG1VMmlLLWYwQUMzaEh3STN4WW5kWQ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:8.0s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>中時新聞網</div>
+    <div class="news-date">2026-01-14</div>
+  </div>
+  <h3 class="news-title">一味擴大人工生殖也擴大隱憂！國教盟提出3呼籲</h3>
+  <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTFBrNG9UODNtME11Mkl1YnpDWWtOa1Q0LVhMRFpFR1gwMFMzaFRoQXUza285cjlxOGdhUEV3WXgxSmJON1VuY3J3aEhCUW9fNi0tbmt3LWtRcXlOTFduc0l2X3lXNTVhWWdUeHAtTU1B?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:8.1s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>NOWnews今日新聞</div>
+    <div class="news-date">2025-12-10</div>
+  </div>
+  <h3 class="news-title">國教盟看澳洲兒少社群禁令　呼籲政府管理業者自律、引導家長陪伴</h3>
+  <a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE9FQzhYRXp0UTNFOV8wb1VxaHBKMlo4S0dqWms2eUYxbEFqbzZ1YTRTb0t4M3dZMVFxVTZPMHBockZGZHJsa2lUWm5CSVDSAVJBVV95cUxPYW1EWXczdm5aNU5STG1IYUlSWS1vckVZVkdiSEZlWE5Vd0RfVjdQd0lYQk5OdF9Za3NzWThLLUN5SFpvZUdrUV9CZWNOOF9QUnR3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:8.2s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>MSN</div>
+    <div class="news-date">2026-03-12</div>
+  </div>
+  <h3 class="news-title">青少年性病飆升、低齡化 國教盟： 健康促進教育長期被邊緣化</h3>
+  <a href="https://news.google.com/rss/articles/CBMipgRBVV95cUxQWlVvRjJpcTA0WVRDeVpDMXpseUpyMkNaSXlwTWZqU3ljenBkWDd5a2p6bkFVMlBDcUxtN1dBYTBCd0xrSjVpQXZTQnVKWEFQRkl2TTJtQVZUWlhyaDZrTEFRT0RRWjJJVE9LdnoxclRscWwwR2RDY2E4YjkyRWNNQzYwbW9jQkVTY0EtZmlId3JYNjZwMmRBWHJ3Tm16Z0RHVnZ1R3ZxZTZORGt0OHNBNl81ZlFfTjNueU5GOVVYV3VBRVFpTTlGdVM5V3lBMHFXOUNIVEJCXzZ2MS1tMVVqam1FQzZVZmJfbFplOFB1eEZGczVlNlRwZ25fZUtGdXUtVXRDSTR5b25PclVXeDI4cnhRZ0FFUlhNY21IV3dhOFQ5aFFlMkxNazRzMWtRUFV0eGgxV0IzMkF6dUlGQ25ZYk1VODlaaXRVZ0h5NFo4WE9panlnUmlvcE5lc3dxVTJ6RWxSUXBzRmxjdUx4RkpWWi1oSDhzdVh5bGxaMXRsVUxKaGFRa3NYdmtsVElmVTNuZ05sdFRJYmdWX0hURlBpNVZqZjBYNDRKZm1mYlI4NzhzWFpLRDFPQm9mS1FRRFQwei1sbnUzcGl4OTNMMHAtZHNEZjlDVDBkdXR4X0xyOXp2RGl0NlZ5alhLQkFOZE5vcERDOGZqZHhTbE5tRlBsMHpFVmxPdEdmTldIVmFwT3ZuNHdQRFFUYV9nNXhjRm1nRVJPcHpn?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:8.3s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-09-26</div>
+  </div>
+  <h3 class="news-title">國教盟挺教師籲推行政減量 調高導師費、增輔導加給</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE92Y3RzTjlKU1owVVZDVFVwZzd3bXdGazB0bGswNmxNaTl3REJ6OElJUVZzX3g3M1BTSVlGVjZPc3BkUGRPUnZvQ05GMFQ3TFNiMGNtRnJvVDgwSnd0dTIyVFdiYUTSAWpBVV95cUxNX0hCY1drSGhlODJZVTZOelQycXMtQi1FMXUwYW9pWkRrUTVXaWhOVHFmTU9EOUVlVTFmM1A2Q0lOSU5rU1RpN21QNGY2VkROX1BldGhqNGJKcTRpdGhoOThfUFh2NElGUWNR?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:8.4s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>工商時報</div>
+    <div class="news-date">2025-12-16</div>
+  </div>
+  <h3 class="news-title">毒駕年增8倍新型毒品變化快速國教盟籲雙層檢測防漏檢- 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE1VR1QwbkFMV3hVSjkzelpnZnRyLXdFanhjVTVCSTlPU1hHNjc4SEd1Z3NNV29xQlRkQm5Ba0g1dk8zc1BHUFVjdHdoaTVIM1J4cEZqQ1Z2OFFjRW5TOHIw?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:8.5s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>梅花新聞網</div>
+    <div class="news-date">2025-12-10</div>
+  </div>
+  <h3 class="news-title">喪屍菸彈驚爆國中校園 國教盟痛批政府怠惰不修法</h3>
+  <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5WNmdKelBOM2htLWJWZEJhX0dkMXNvbERFWlNMcU5VYmtMN1N6OTBIcmdjVE1ERWJFckFnVXNVSkRXNnJ1TFE5cHZGTldzSElYcTZnSC1ha0o?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:8.6s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>基督教論壇報</div>
+    <div class="news-date">2025-06-20</div>
+  </div>
+  <h3 class="news-title">【每個孩子都值得被理解】國教盟、醫界與跨黨派立委共推「生活導師制度」接住不一樣的兒少</h3>
+  <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1oMW41QmFFVlMtRDUxNFRiMGFQSEwwcG9HVW1FVmVZeThzLWdKZHhoX3hvOXpKMHIwdzVZWnhxNVZsY1ZQUUpiOFBhT3hQd0tweGdJQ0trNFp5MVhRWTBIMms4NnBzeFFkd2c?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:8.7s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>工商時報</div>
+    <div class="news-date">2025-11-17</div>
+  </div>
+  <h3 class="news-title">全球逾1500萬青少年吸電子煙！國教盟籲：即刻下架加味菸品- 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBQTjBFbnVFVG5ldGRkamUwWGxaRFMtUkpMdkN3ek1hQ1U0X29qeW1OTGVzd3MySHk5VzVLR0tvaXpYQWJjdGVfQUZVblJXNGtxQTA1X3lvalNqa2hTcklr?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:8.8s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>NOWnews今日新聞</div>
+    <div class="news-date">2025-12-08</div>
+  </div>
+  <h3 class="news-title">學生遭性暴力影像外流　國教盟籲設保護課、政府整合單一求助窗口</h3>
+  <a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE1OUjdweDhSdklRYkZ0b2U1dGowYUtESjJPZ0RLT3luN3F5TDRJbVZ6dm04VmM1UnlYaS16UktPSTZWckZLb09sWHJLb3XSAVJBVV95cUxNVi1wSVZ3allJbXJkQVFmVDlNLWIteW1QT3hNeHNWZ0hmdHY0VmRHQnlNNGZyWFN2ei1pSEpmNlV2VHhwZG9zRUJqN25LVzlVem5B?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:8.9s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-08-26</div>
+  </div>
+  <h3 class="news-title">中小學將開學 國教盟呼籲中止全面性教育教學指引</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE9tUDdxVENKRURCUVdwLUNQaVlUX3c4OXJYMXhuVUZFTWxEU1oyM2drcXdibTJIcGo5eHRtS0tTRGdJOWlpR1VMUmZGNy05aE1ocEFidnNQVjdLZGNrR05sbnBzVDXSAWpBVV95cUxOS0ZGVlh5T3NtQWRGdlBESTk0LUlfOTNWYU1jYVNMR0FWTUQ2RWNWd2toVEZLUEI0ejh3SVNkcEFaY21JMTNVV3czVmdETmVIRU1zSGdIclloV2tsZXVSRGVDX0Z6RktsRUx3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:9.0s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-07-10</div>
+  </div>
+  <h3 class="news-title">建臺高中損害23名考生權益 國教盟：啟動重大事故應變機制補救</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1PUk1WdldCZlUwbWMxelpFZWN3eUp1NXpVRTJoMDZDN0toWDA4ZzI0Q1haMUpWLWtzYzJPNDVfdUJ6d29ud2RSd3JiSzVrOTg4ZG40SXdGb0w3V3VOTEtSYVo3a0PSAWpBVV95cUxOajY5bWVmM0JUOG5ZUjN4eks5aERHOXRDbzFoYVRocV9SWWZGRUtXcnhEQXk0YmduZ090eHNGa09nY1h3MFBlazMzel9sYUo4TUFuODRTN3ZFUzlPSHZydFNES1VSbS10R3N3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:9.1s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>CTWANT</div>
+    <div class="news-date">2025-09-15</div>
+  </div>
+  <h3 class="news-title">破萬人連署國高中10點上課　國教盟籲課綱、配套一併檢討 | 政治 | CTWANT</h3>
+  <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ENFYtTFp5M0dDWi1lbExfZzhOOXBDczc0MjhDM0FUcFVJS2ozSGgxUUJ2VlF5TTRWMlJRenQyZmVYM01LMDNTRXdBRGVTSlnSAVRBVV95cUxQMkVHYzhPZFVMRndIeDh0Z1N6WDVvUTlZZUo2SF9YWUhER0ZoN0lLMzFiM25UMHpJcWEtTzJUMWRsVGVzNzRVUnRQUlJTa1g1WnJoVm0?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:9.2s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由時報</div>
+    <div class="news-date">2025-08-28</div>
+  </div>
+  <h3 class="news-title">石崇良掌衛福部 國教盟籲加速早療服務、縮短等待</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE05YXZXSW94RUNXY1dlaW1hNURyc21sSWpSa1RSelljSnlDNVp1NEpmVHMyTjJKS01NZzBydzlMYjJheE1uaW9uYVpTNGF4dWN1SlFfNEJHaE51VXRyZmdEWk1PTWLSAWpBVV95cUxOVy11Nkx2N0d1LUd0ZzNvZnBlZXpNM0EzMGRIbHpmUnJGaTJhbDRzamRhMGtLWmhXbzN3bmxWSEhsUEctWUVGQ3BGZW56eENvOERXdmNBLWptelNiVnNvSkNFRHhObzg0eHZn?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:9.3s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>工商時報</div>
+    <div class="news-date">2025-07-10</div>
+  </div>
+  <h3 class="news-title">建臺高中爆烏龍考科報錯國教盟轟：教育部及相關單位勿推責- 生活</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE8yNENxa205VzRnejIxU0pyejA0eWhIelNsUDB6SUV3aFA4NFhwWVBzYVpvclp3T0JsSXo5UmxnMXBjWkZ4Z0lCQlhNd3hWdUVhMUZVeHVmVUZHejdNM0dj?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:9.4s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>LINE TODAY</div>
+    <div class="news-date">2025-09-24</div>
+  </div>
+  <h3 class="news-title">萬人連署拚10點上課...能救青少年睡眠？教育部、國教盟、醫師不同調 | 信傳媒</h3>
+  <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Ud3JnRHNTXzRhSElacUxhS252ZXBXTlJuMlBMdGFFYWFIM1otMDFZb2MtMWpBN0xONTdVLVdBSVBzMDdYaDZTV3R2d25qLWJ0UFROX0V3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:9.5s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由健康網</div>
+    <div class="news-date">2025-07-31</div>
+  </div>
+  <h3 class="news-title">未成年兒少照顧者暑假壓力倍增 國教盟和天使心籲政府伸援手</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5Zc3g1WWpmMndMWm5YVlVZVUk3cWkyNDNDMlkzWjE5c0M5VVZSM3Q2UXVrSDVWUUFMOXJfN01JOThBNmEtRFlJTktLWndneEtNVFA4MUlCT1ZqV3Rpd2ZEeVBZY2rSAWpBVV95cUxNSTBsa0lycU0ydlRQOEpMcW1hZDFvSmVNTzV4X3hTdlpkOUJwNzVzZVJadVh3MzF0ZnFSUm1fMVpoeUwzTGcyY3hPT0kxaXJvbkU0OFZLZXJtYjg4bmhBZ2V6ZzRzbWo0ZC1B?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:9.6s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>自由健康網</div>
+    <div class="news-date">2025-05-29</div>
+  </div>
+  <h3 class="news-title">青少年染性病飆升 國教盟籲加強性健康教育</h3>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5lbGZPd0VDSGxFbTFLeU9fUHI1d3o2R1V3RzlFTVpUR0VyMi1FYk54WHVnLVNsZU5vYlJJRXFUX2RBUWFkV0NVaUFidmRHZmpyaEdMZkRlZDFPcEJVcmZDRTlva2fSAWpBVV95cUxPMDNJNUhzVFZCWUp4V1NOV1JvTXJ3eVAzcFcxU0dJR0JodDh5MVJFanM5QVQ0ZjkzTDcyRk1LUGlKY0VxbHE5Q2VxSmI3OHYwRHVJZzg1SnQ0TXExSlNEbWJZcTVzaGlpQjFB?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:9.7s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>中央社 CNA</div>
+    <div class="news-date">2025-04-30</div>
+  </div>
+  <h3 class="news-title">兒少精神疾病易污名 國教盟籲正名「神經多樣性」</h3>
+  <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBSaXcxVEJHR2xWcWZfQjQxV05ra0ZUM0J3STdOT2RySzBkQlphdmoyQlpzajZLeUVQMExnMzAwcXNwMmo5cENDZ21oNUJxNWJQTk13TGtRTWdJM0pxZF9J?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:9.8s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span>NOWnews今日新聞</div>
+    <div class="news-date">2025-11-22</div>
+  </div>
+  <h3 class="news-title">教育部修法處理校事會議　國教盟肯定但憂心、全教總批毀師滅校</h3>
+  <a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE5mV29xYV9KRGxJX3IzQkRJbWlpZzNSa3IwZ3FkY05wVUxkTFhtTE9KT2l6NEpFMHdNb0tHWGlHSURZamJGbnJ0N1dmZjXSAVJBVV95cUxNOWZaWXgtYUpTeWdzclFGSkFrWkRNaEVpRzVHRW9Yd1ZsU0hhcTNlNFh6V3hudGl6bE5FWjEwaGZUSGNaWUNkc3R3a0hOMFJZN0xB?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article>
 <div class="comment-section">
   <div class="comment-header">✏️ 小編短評</div>
-  <div class="comment-text">今日值得關注的議題包括：「AI假学生在美国狂骗助学金」、「AI新锐被列为“供应链风险” 五角大楼正分裂美国科技企业？」、「山寨豪车老头乐热销农村引担忧：不用考驾照/上牌/买保险 时速...」。 國教盟持續關注兒少教育議題，為孩子的未來發聲！</div>
+  <div class="comment-text">今日值得關注的議題包括：「【轉知】國立臺北教育大學台灣語言與文化學系將於115學年度正...」、「臺灣台語輸入法App上架 即日起行動裝置也能輸入臺灣台語」、「台東縣府、馬偕攜手合作 共築兒少保護網」。 今日共有 93 則國教盟相關報導，持續追蹤中。</div>
 </div>
 
 <div class="action-bar">
@@ -300,13 +1135,13 @@ footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
 </div>
 
 <div style="text-align:center;margin-top:16px">
-  <span class="update-time">🕐 更新時間：2026/03/14 13:20</span>
+  <span class="update-time">🕐 更新時間：2026/03/14 13:23</span>
 </div>
 </main>
 
 <footer>
   由 <a href="https://www.facebook.com/naer.tw" target="_blank">國教行動聯盟</a> 整理<br>
-  新聞來源為各媒體公開報導
+  新聞來源：Google News 台灣
 </footer>
 
 <button class="back-top" onclick="scrollToTop()" id="backTop">
