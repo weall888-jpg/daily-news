@@ -3,222 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>國教盟週報 - 2026-W11</title>
-<meta property="og:title" content="國教盟週報 - 2026-W11">
-<meta property="og:description" content="國教盟第11週新聞彙整">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>國教盟週報 - 2026年第11週</title>
+<meta property="og:title" content="國教盟週報 - 2026年第11週 (3/10-3/16)">
+<meta property="og:description" content="本週兒少教育新聞彙整，由國教行動聯盟整理">
+<meta property="og:image" content="https://naer-tw.github.io/daily-news/og-image.png">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
-  --primary: #1e3a5f; --primary-light: #2a4f7f;
-  --accent: #2a9d8f; --accent-light: #3dbdad;
-  --danger: #c9184a; --warning: #e76f51;
-  --bg: #f0f2f5; --card: #ffffff;
-  --text: #1a1a2e; --text-light: #6b7280;
-  --border: #e5e7eb;
-  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.03);
-  --shadow-lg: 0 10px 25px rgba(0,0,0,0.06);
-  --radius: 16px; --radius-sm: 10px;
-}
-[data-theme="dark"] {
-  --primary: #60a5fa; --primary-light: #93c5fd;
-  --accent: #34d399; --accent-light: #6ee7b7;
-  --danger: #fb7185; --warning: #fb923c;
-  --bg: #0f172a; --card: #1e293b;
-  --text: #f1f5f9; --text-light: #94a3b8;
-  --border: #334155;
-  --shadow: 0 1px 3px rgba(0,0,0,0.3);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.25);
-  --shadow-lg: 0 10px 25px rgba(0,0,0,0.3);
+  --primary: #5c1a30; --accent: #e8553d; --danger: #8b1a2a;
+  --bg: #f0f2f5; --card: #ffffff; --text: #1a1a2e; --text-light: #6b7280; --border: #e5e7eb;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06); --shadow-md: 0 4px 6px rgba(0,0,0,0.04);
+  --radius: 16px;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; transition: background 0.3s, color 0.3s; }
-
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.75;
+}
 .header {
-  background: linear-gradient(135deg, #0f4c75 0%, #1e3a5f 50%, #3282b8 100%);
-  color: white; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #5c1a30 0%, #7a2840 100%);
+  color: white; padding: 32px 20px; text-align: center;
 }
-[data-theme="dark"] .header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); }
-.header::before {
-  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-  background: radial-gradient(circle, rgba(50,130,184,0.1) 0%, transparent 60%);
-  animation: headerPulse 8s ease-in-out infinite;
-}
-@keyframes headerPulse { 0%,100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 1; } }
-.header-inner { position: relative; z-index: 1; padding: 28px 20px 20px; text-align: center; }
-.header-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(255,255,255,0.15); backdrop-filter: blur(10px);
-  padding: 4px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 500;
-  letter-spacing: 0.5px; margin-bottom: 12px;
-}
-.header-badge .icon { font-size: 0.9rem; }
+.header-badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 4px 14px; border-radius: 50px; font-size: 0.75rem; margin-bottom: 12px; }
 .header-date { font-size: 0.9rem; opacity: 0.9; margin-bottom: 6px; }
-.header-title { font-size: 1.6rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 4px; }
-.header-sub { font-size: 0.8rem; opacity: 0.7; font-weight: 300; }
-.nav-bar {
-  display: flex; justify-content: center; gap: 4px; padding: 10px 16px 14px; position: relative; z-index: 1;
-}
-.nav-bar a {
-  display: inline-flex; align-items: center; gap: 4px; padding: 6px 14px; border-radius: 50px;
-  font-size: 0.75rem; font-weight: 600; text-decoration: none;
-  color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.1); transition: all 0.2s;
-}
-.nav-bar a:hover { background: rgba(255,255,255,0.2); color: white; }
-.nav-bar a.active { background: rgba(255,255,255,0.25); color: white; }
+.header-title { font-size: 1.6rem; font-weight: 900; margin-bottom: 4px; }
+.header-sub { font-size: 0.8rem; opacity: 0.7; }
+main { max-width: 700px; margin: 0 auto; padding: 24px 16px; }
 
-.stats-bar {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
-  padding: 0 16px; margin-top: -20px; position: relative; z-index: 2;
-  max-width: 640px; margin-left: auto; margin-right: auto;
-}
-.stat-card {
-  background: var(--card); border-radius: var(--radius-sm); padding: 14px 8px;
-  text-align: center; box-shadow: var(--shadow-md); transition: transform 0.2s;
-}
-.stat-card:hover { transform: translateY(-2px); }
-.stat-number { font-size: 1.4rem; font-weight: 900; color: var(--primary); line-height: 1.2; }
-.stat-label { font-size: 0.65rem; color: var(--text-light); margin-top: 2px; }
-.stat-card:nth-child(2) .stat-number { color: var(--accent); }
-.stat-card:nth-child(3) .stat-number { color: var(--danger); }
-.stat-card:nth-child(4) .stat-number { color: var(--warning); }
+.summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 28px; }
+.summary-card { background: var(--card); border-radius: 12px; padding: 16px; text-align: center; box-shadow: var(--shadow-md); }
+.summary-number { font-size: 1.8rem; font-weight: 900; color: var(--primary); }
+.summary-label { font-size: 0.7rem; color: var(--text-light); margin-top: 4px; }
 
-.theme-toggle {
-  position: fixed; top: 16px; right: 16px; z-index: 100; width: 40px; height: 40px;
-  border-radius: 50%; border: none; background: var(--card); box-shadow: var(--shadow-md);
-  cursor: pointer; display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; transition: all 0.3s;
-}
-.theme-toggle:hover { transform: scale(1.1); }
-main { max-width: 640px; margin: 0 auto; padding: 24px 16px 16px; }
+.section { margin-bottom: 28px; }
+.section-title { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 8px; }
+.section-icon { font-size: 1.2rem; }
 
-/* day-nav */
-.day-nav {
-  display: flex; gap: 4px; justify-content: center; margin: 20px 0 8px;
-  flex-wrap: wrap;
-}
-.day-chip {
-  padding: 6px 12px; border-radius: 50px; font-size: 0.72rem; font-weight: 600;
-  background: var(--card); color: var(--text-light); border: 1px solid var(--border);
-  text-decoration: none; transition: all 0.2s;
-}
-.day-chip:hover { background: var(--primary); color: white; border-color: var(--primary); }
-.day-chip.has-data { color: var(--primary); border-color: var(--primary); }
-.day-chip.no-data { opacity: 0.4; }
+.week-item { background: var(--card); border-radius: 12px; padding: 16px; margin-bottom: 10px; box-shadow: var(--shadow); border-left: 4px solid var(--accent); }
+.week-item.press { border-left-color: var(--primary); }
+.week-item-date { font-size: 0.75rem; color: var(--text-light); margin-bottom: 4px; }
+.week-item-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+.week-item-desc { font-size: 0.82rem; color: var(--text-light); line-height: 1.6; }
+.week-item-source { font-size: 0.72rem; color: var(--accent); margin-top: 8px; }
 
-.section-header {
-  display: flex; align-items: center; gap: 10px; margin: 28px 0 14px;
-  padding-bottom: 10px; border-bottom: 2px solid var(--border); position: relative;
-}
-.section-header::after {
-  content: ''; position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px;
-  background: var(--primary); border-radius: 2px;
-}
-.section-header.highlight::after { background: var(--danger); }
-.section-icon {
-  width: 36px; height: 36px; border-radius: 10px; display: flex;
-  align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;
-  background: rgba(30,58,95,0.08);
-}
-.section-header.highlight .section-icon { background: rgba(201,24,74,0.1); }
-[data-theme="dark"] .section-icon { background: rgba(96,165,250,0.15); }
-[data-theme="dark"] .section-header.highlight .section-icon { background: rgba(251,113,133,0.15); }
-.section-name { font-size: 1.05rem; font-weight: 700; color: var(--text); }
-.section-count { margin-left: auto; font-size: 0.7rem; font-weight: 600; color: var(--text-light); background: var(--bg); padding: 2px 10px; border-radius: 50px; }
+.highlight-box { background: linear-gradient(135deg, rgba(92,26,48,0.05), rgba(232,85,61,0.05)); border-radius: 16px; padding: 20px; margin-bottom: 24px; border: 1px solid rgba(92,26,48,0.1); }
+.highlight-title { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+.highlight-text { font-size: 0.85rem; color: var(--text); line-height: 1.8; }
 
-.news-card {
-  background: var(--card); border-radius: var(--radius); padding: 18px; margin-bottom: 12px;
-  box-shadow: var(--shadow); border: 1px solid var(--border); transition: all 0.25s ease;
-  animation: slideUp 0.5s ease both; position: relative; overflow: hidden;
-}
-.news-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--accent); border-radius: 4px 0 0 4px; }
-.news-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-.news-card.featured { border-color: rgba(201,24,74,0.15); }
-.news-card.featured::before { background: var(--danger); }
-@keyframes slideUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-.news-source { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--text-light); font-weight: 500; }
-.source-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
-.news-card.featured .source-dot { background: var(--danger); }
-.news-date { font-size: 0.7rem; color: var(--text-light); }
-.news-title { font-size: 1rem; font-weight: 700; line-height: 1.5; margin-bottom: 8px; color: var(--text); }
-.badge { display: inline-block; padding: 1px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; margin-right: 6px; vertical-align: middle; letter-spacing: 0.5px; }
-.badge-hot { background: var(--danger); color: white; }
-.news-summary { font-size: 0.88rem; color: var(--text-light); line-height: 1.65; }
-.news-link { display: inline-flex; align-items: center; gap: 4px; margin-top: 12px; font-size: 0.82rem; color: var(--accent); text-decoration: none; font-weight: 600; transition: gap 0.2s; }
-.news-link:hover { gap: 8px; }
-.no-news { color: var(--text-light); font-size: 0.9rem; padding: 20px; text-align: center; background: var(--card); border-radius: var(--radius); border: 1px dashed var(--border); }
+.nav-back { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: var(--card); border-radius: 50px; text-decoration: none; color: var(--text); font-size: 0.82rem; font-weight: 600; box-shadow: var(--shadow); margin-bottom: 20px; }
+.nav-back:hover { background: var(--bg); }
 
-.action-bar { display: flex; justify-content: center; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
-.share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 12px 24px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; }
-.share-btn.line { background: #06C755; color: white; }
-.share-btn.line:hover { background: #05b04c; }
+footer { text-align: center; padding: 20px; font-size: 0.72rem; color: var(--text-light); border-top: 1px solid var(--border); margin-top: 24px; }
+footer a { color: var(--accent); text-decoration: none; }
 
-footer { text-align: center; padding: 24px 16px; font-size: 0.75rem; color: var(--text-light); border-top: 1px solid var(--border); margin-top: 32px; }
-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
-@media (max-width: 400px) { .stats-bar { grid-template-columns: repeat(2, 1fr); } .header-title { font-size: 1.3rem; } }
+@media (max-width: 500px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
 <body>
-<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-<div class="header">
-  <div class="header-inner">
-    <div class="header-badge"><span class="icon">📅</span> 週報彙整</div>
-    <div class="header-date">2026年 第11週（03/09 - 03/15）</div>
-    <h1 class="header-title">國教盟週報</h1>
-    <div class="header-sub">一週新聞回顧 · 國教行動聯盟</div>
-  </div>
-  <nav class="nav-bar">
-    <a href="https://weall888-jpg.github.io/daily-news/">📰 日報</a>
-    <a href="#" class="active">📅 週報</a>
-    <a href="https://weall888-jpg.github.io/daily-news/archive/monthly/2026-03.html">📊 月報</a>
-  </nav>
-</div>
 
-<div class="stats-bar">
-  <div class="stat-card"><div class="stat-number">1</div><div class="stat-label">發刊天數</div></div>
-  <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">新聞總數</div></div>
-  <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">焦點報導</div></div>
-  <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">新聞來源</div></div>
+<div class="header">
+  <div class="header-badge">📅 週報</div>
+  <div class="header-date">2026年第11週（3/10 - 3/16）</div>
+  <h1 class="header-title">國教盟週報</h1>
+  <div class="header-sub">本週兒少教育新聞彙整</div>
 </div>
 
 <main>
-<div class="day-nav">
-<a href="#" class="day-chip no-data">週一 03/09</a>
-<a href="#" class="day-chip no-data">週二 03/10</a>
-<a href="#" class="day-chip no-data">週三 03/11</a>
-<a href="#" class="day-chip no-data">週四 03/12</a>
-<a href="#" class="day-chip no-data">週五 03/13</a>
-<a href="#" class="day-chip no-data">週六 03/14</a>
-<a href="#" class="day-chip no-data">週日 03/15</a>
-</div>
-<div class="section-header highlight"><div class="section-icon">🔥</div><div class="section-name">本週焦點</div><span class="section-count">0 則</span></div>
-<div class="no-news">本週暫無焦點新聞</div>
+<a href="https://naer-tw.github.io/daily-news/" class="nav-back">← 返回日報</a>
 
-<div class="section-header"><div class="section-icon">📋</div><div class="section-name">本週新聞總覽</div><span class="section-count">0 則</span></div>
-<div class="no-news">本週暫無其他新聞</div>
-
-<div class="action-bar">
-  <a href="https://social-plugins.line.me/lineit/share?url=https://weall888-jpg.github.io/daily-news/archive/weekly/2026-W11.html" target="_blank" class="share-btn line">📤 分享到 LINE</a>
+<div class="summary-grid">
+  <div class="summary-card"><div class="summary-number">15+</div><div class="summary-label">本週新聞</div></div>
+  <div class="summary-card"><div class="summary-number" style="color:#e8553d">2</div><div class="summary-label">國教盟發稿</div></div>
+  <div class="summary-card"><div class="summary-number" style="color:#8b1a2a">2</div><div class="summary-label">重要拜會</div></div>
+  <div class="summary-card"><div class="summary-number" style="color:#a8b8d0">3</div><div class="summary-label">焦點議題</div></div>
 </div>
+
+<div class="highlight-box">
+  <div class="highlight-title">📌 本週焦點：少事法修法與校園安全</div>
+  <div class="highlight-text">
+    本週新聞主軸集中在<strong>少年事件處理法修法</strong>議題。新北割頸案家屬楊爸14日於立法院前發聲，逾300人到場聲援，呼籲修正少事法的前科塗銷制度、納入被害人意見。國民黨團提案重罪不得假釋，時代力量提出四大改革建議。<br><br>
+    同時，<strong>嘉義醫專持刀事件</strong>與<strong>國中生蝴蝶刀事件</strong>也引發校園安全討論，突顯退學生追蹤輔導、校安人員裝備等制度缺口。
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="section-icon">📝</span>本週國教盟發稿</div>
+  
+  <div class="week-item press">
+    <div class="week-item-date">📅 3月10日</div>
+    <div class="week-item-title">國教盟針對嘉義校園持刀事件聲明</div>
+    <div class="week-item-desc">校園安全不能只靠校安人員肉身擋刀——呼籲建立從在校到離校的完整支持系統。針對校安人員裝備訓練、退學生追蹤輔導、校園門禁管理等三大漏洞提出具體建議。</div>
+  </div>
+  
+  <div class="week-item press">
+    <div class="week-item-date">📅 3月13日</div>
+    <div class="week-item-title">保護少年不等於縱容犯罪——呼籲少事法建立再犯風險評估機制</div>
+    <div class="week-item-desc">針對新北割頸案判決，國教盟呼籲修法建立科學化的「再犯風險評估」機制、釐清保護責任歸屬、保障被害人家屬知情權與程序參與權。</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="section-icon">🤝</span>本週重要拜會</div>
+  
+  <div class="week-item">
+    <div class="week-item-date">📅 3月13日</div>
+    <div class="week-item-title">拜會衛環委員會新任召委</div>
+    <div class="week-item-desc">國教盟理事長拜會盧縣一委員、林月琴委員（衛環委員會新任召集委員），就少事法修法、兒少保護政策等議題交換意見。</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="section-icon">🔥</span>本週焦點新聞</div>
+  
+  <div class="week-item">
+    <div class="week-item-date">3/14-15</div>
+    <div class="week-item-title">逾300人挺割頸案家屬 高喊修少事法</div>
+    <div class="week-item-desc">楊爸於立法院群賢樓發聲，呼籲修正少事法，提出檢討前科塗銷制度、建立家庭輔育功能、強化校園安全等五大訴求。</div>
+    <div class="week-item-source">聯合新聞網、工商時報、公視</div>
+  </div>
+
+  <div class="week-item">
+    <div class="week-item-date">3/12</div>
+    <div class="week-item-title">時力提少事法四大改革建議</div>
+    <div class="week-item-desc">王婉諭力挺割頸案家屬，指出少事法遺忘被害人，提出保障被害人知情權、程序參與權等修法訴求。</div>
+    <div class="week-item-source">關鍵評論網、壹蘋新聞</div>
+  </div>
+
+  <div class="week-item">
+    <div class="week-item-date">3/10</div>
+    <div class="week-item-title">協助學校推動學習歷程檔案 教育部年投逾2000萬</div>
+    <div class="week-item-desc">教育部提供專案補助，協助學校推動學習歷程檔案，每校每學年最高補助50萬元，112學年共53校獲補助。</div>
+    <div class="week-item-source">自由時報</div>
+  </div>
+
+  <div class="week-item">
+    <div class="week-item-date">3/12</div>
+    <div class="week-item-title">調查指56%兒少曾遭不當碰觸 68%說出口未被相信</div>
+    <div class="week-item-desc">調查顯示超過半數兒少曾遭不當碰觸，且多數說出口時未被相信，呼籲加強身體界線教育。</div>
+    <div class="week-item-source">公視新聞</div>
+  </div>
+
+  <div class="week-item">
+    <div class="week-item-date">3/09</div>
+    <div class="week-item-title">嘉縣醫專退學生涉持刀闖校園咆哮</div>
+    <div class="week-item-desc">17歲退學男生持刀闖入校園，校安人員徒手制伏，1人受傷。事件暴露校安裝備與退學生追蹤機制不足。</div>
+    <div class="week-item-source">中央社、聯合新聞網</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="section-icon">📊</span>下週關注</div>
+  <div class="week-item">
+    <div class="week-item-title">持續追蹤議題</div>
+    <div class="week-item-desc">
+      • 少事法修法進度與朝野各版本<br>
+      • 國語日報學習歷程檔案專題後續<br>
+      • 校園安全相關政策檢討
+    </div>
+  </div>
+</div>
+
 </main>
+
 <footer>
-  由 <a href="https://www.facebook.com/naer.tw" target="_blank">國教行動聯盟</a> 整理<br>
-  生成時間：2026/03/11 15:29
+  <p>由 <a href="https://www.facebook.com/naikisjoy" target="_blank">國教行動聯盟</a> 整理提供</p>
+  <p style="margin-top: 4px;">週報發布：2026年3月15日</p>
 </footer>
-<script>
-function toggleTheme() {
-  const b = document.body, btn = document.querySelector('.theme-toggle');
-  if (b.getAttribute('data-theme') === 'dark') { b.removeAttribute('data-theme'); btn.textContent = '🌙'; localStorage.setItem('theme','light'); }
-  else { b.setAttribute('data-theme', 'dark'); btn.textContent = '☀️'; localStorage.setItem('theme','dark'); }
-}
-(function() {
-  if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.body.setAttribute('data-theme', 'dark'); document.querySelector('.theme-toggle').textContent = '☀️';
-  }
-})();
-</script>
+
 </body>
 </html>
