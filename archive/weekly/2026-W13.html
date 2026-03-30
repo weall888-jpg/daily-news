@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>國教盟週報 - 2026-W13</title>
+<meta property="og:title" content="國教盟週報 - 2026-W13 (03/23 - 03/29)">
+<meta property="og:description" content="國教盟第13週新聞彙整：23則新聞、8則媒體報導">
+<meta property="og:image" content="https://naer-tw.github.io/daily-news/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://naer-tw.github.io/daily-news/archive/weekly/2026-W13.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #5c1a30; --primary-light: #7a2840;
+  --accent: #e8553d; --accent-light: #f07060;
+  --danger: #8b1a2a; --warning: #a8b8d0;
+  --bg: #f0f2f5; --card: #ffffff;
+  --text: #1a1a2e; --text-light: #6b7280; --border: #e5e7eb;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.03);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.06);
+  --radius: 16px; --radius-sm: 10px;
+}
+[data-theme="dark"] {
+  --primary: #f07060; --primary-light: #f59090;
+  --accent: #e8553d; --accent-light: #f07060;
+  --danger: #ff8a9a; --warning: #c0cfe0;
+  --bg: #0f172a; --card: #1e293b;
+  --text: #f1f5f9; --text-light: #94a3b8; --border: #334155;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.25);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.3);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.75;
+  transition: background 0.3s, color 0.3s; -webkit-font-smoothing: antialiased;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.header {
+  background: linear-gradient(135deg, #5c1a30 0%, #7a2840 50%, #5c1a30 100%);
+  color: white; position: relative; overflow: hidden;
+}
+[data-theme="dark"] .header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); }
+.header::before {
+  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle, rgba(122,40,64,0.1) 0%, transparent 60%);
+  animation: headerPulse 8s ease-in-out infinite;
+}
+@keyframes headerPulse { 0%,100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 1; } }
+.header-inner { position: relative; z-index: 1; padding: 28px 20px 20px; text-align: center; }
+.header-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,0.15); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  padding: 4px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 500;
+  letter-spacing: 0.5px; margin-bottom: 12px;
+}
+.header-badge .icon { font-size: 0.9rem; }
+.header-date { font-size: 0.9rem; opacity: 0.9; margin-bottom: 6px; }
+.header-title { font-size: 1.6rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 4px; }
+.header-sub { font-size: 0.8rem; opacity: 0.7; font-weight: 300; }
+.nav-bar {
+  display: flex; justify-content: center; gap: 4px; padding: 10px 16px 14px;
+  position: relative; z-index: 1; flex-wrap: wrap;
+}
+.nav-bar a {
+  display: inline-flex; align-items: center; gap: 4px; padding: 6px 14px; border-radius: 50px;
+  font-size: 0.75rem; font-weight: 600; text-decoration: none;
+  color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.1); transition: all 0.2s;
+}
+.nav-bar a:hover { background: rgba(255,255,255,0.2); color: white; }
+.nav-bar a.active { background: rgba(255,255,255,0.25); color: white; }
+
+.stats-bar {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+  padding: 0 16px; margin-top: -20px; position: relative; z-index: 2;
+  max-width: 640px; margin-left: auto; margin-right: auto;
+}
+.stat-card {
+  background: var(--card); border-radius: var(--radius-sm); padding: 14px 8px;
+  text-align: center; box-shadow: var(--shadow-md); transition: transform 0.2s;
+}
+.stat-card:hover { transform: translateY(-2px); }
+.stat-number { font-size: 1.4rem; font-weight: 900; color: var(--primary); line-height: 1.2; }
+.stat-label { font-size: 0.65rem; color: var(--text-light); margin-top: 2px; }
+.stat-card:nth-child(2) .stat-number { color: var(--accent); }
+.stat-card:nth-child(3) .stat-number { color: var(--danger); }
+.stat-card:nth-child(4) .stat-number { color: var(--warning); }
+
+.theme-toggle {
+  position: fixed; top: 16px; right: 16px; z-index: 100; width: 40px; height: 40px;
+  border-radius: 50%; border: none; background: var(--card); box-shadow: var(--shadow-md);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; transition: all 0.3s;
+}
+.theme-toggle:hover { transform: scale(1.1); }
+main { max-width: 640px; margin: 0 auto; padding: 24px 16px 16px; }
+
+.day-nav {
+  display: flex; gap: 4px; justify-content: center; margin: 16px 0 8px; flex-wrap: wrap;
+}
+.day-chip {
+  padding: 6px 12px; border-radius: 50px; font-size: 0.72rem; font-weight: 600;
+  background: var(--card); color: var(--text-light); border: 1px solid var(--border);
+  text-decoration: none; transition: all 0.2s;
+}
+.day-chip:hover { background: var(--primary); color: white; border-color: var(--primary); }
+.day-chip.has-data { color: var(--primary); border-color: var(--primary); }
+.day-chip.no-data { opacity: 0.4; }
+
+.section-header {
+  display: flex; align-items: center; gap: 10px; margin: 24px 0 12px;
+  padding-bottom: 10px; border-bottom: 2px solid var(--border); position: relative;
+}
+.section-header::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px;
+  background: var(--primary); border-radius: 2px;
+}
+.section-header.highlight::after { background: var(--danger); }
+.section-icon {
+  width: 36px; height: 36px; border-radius: 10px; display: flex;
+  align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;
+  background: rgba(92,26,48,0.08);
+}
+.section-header.highlight .section-icon { background: rgba(139,26,42,0.1); }
+[data-theme="dark"] .section-icon { background: rgba(240,112,96,0.15); }
+.section-name { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+.section-count { margin-left: auto; font-size: 0.7rem; font-weight: 600; color: var(--text-light); background: var(--bg); padding: 2px 10px; border-radius: 50px; }
+
+.news-card {
+  background: var(--card); border-radius: var(--radius); padding: 16px; margin-bottom: 10px;
+  box-shadow: var(--shadow); border: 1px solid var(--border); transition: all 0.25s ease;
+  animation: slideUp 0.5s ease both; position: relative; overflow: hidden;
+}
+.news-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--accent); border-radius: 4px 0 0 4px; }
+.news-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.news-card.featured { border-color: rgba(201,24,74,0.15); }
+.news-card.featured::before { background: var(--danger); }
+@keyframes slideUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.news-source { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--text-light); font-weight: 500; }
+.source-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+.news-card.featured .source-dot { background: var(--danger); }
+.news-date { font-size: 0.7rem; color: var(--text-light); }
+.news-title { font-size: 0.95rem; font-weight: 700; line-height: 1.5; margin-bottom: 6px; color: var(--text); }
+.badge { display: inline-block; padding: 1px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; margin-right: 6px; vertical-align: middle; letter-spacing: 0.5px; }
+.badge-hot { background: var(--danger); color: white; }
+.news-summary { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
+.news-link { display: inline-flex; align-items: center; gap: 4px; margin-top: 10px; font-size: 0.82rem; color: var(--accent); text-decoration: none; font-weight: 600; transition: gap 0.2s; }
+.news-link:hover { gap: 8px; }
+.no-news { color: var(--text-light); font-size: 0.85rem; padding: 16px; text-align: center; background: var(--card); border-radius: var(--radius); border: 1px dashed var(--border); }
+
+.comment-section {
+  background: var(--card); border-radius: var(--radius); padding: 18px;
+  margin-top: 20px; border: 1px solid var(--border); box-shadow: var(--shadow);
+  position: relative; overflow: hidden;
+}
+.comment-section::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+.comment-header { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text); margin-bottom: 8px; font-size: 0.92rem; }
+.comment-text { font-size: 0.85rem; color: var(--text-light); line-height: 1.75; }
+
+.action-bar { display: flex; justify-content: center; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+.share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; border-radius: 50px; font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; }
+.share-btn.line { background: #06C755; color: white; }
+.share-btn.line:hover { background: #05b04c; }
+
+footer { text-align: center; padding: 20px 16px; font-size: 0.72rem; color: var(--text-light); border-top: 1px solid var(--border); margin-top: 24px; }
+footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+@media (max-width: 400px) { .stats-bar { grid-template-columns: repeat(2, 1fr); } .header-title { font-size: 1.3rem; } }
+@supports (padding: env(safe-area-inset-bottom)) { body { padding-bottom: env(safe-area-inset-bottom); } }
+</style>
+</head>
+<body>
+<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+<div class="header">
+  <div class="header-inner">
+    <div class="header-badge"><span class="icon">📅</span> 週報彙整</div>
+    <div class="header-date">2026年 第13週（03/23 - 03/29）</div>
+    <h1 class="header-title">國教盟週報</h1>
+    <div class="header-sub">一週新聞回顧 · 國教行動聯盟</div>
+  </div>
+  <nav class="nav-bar">
+    <a href="https://naer-tw.github.io/daily-news/">📰 日報</a>
+    <a href="#" class="active">📅 週報</a>
+    <a href="https://naer-tw.github.io/daily-news/archive/monthly/2026-03.html">📊 月報</a>
+  </nav>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-card"><div class="stat-number">23</div><div class="stat-label">新聞總數</div></div>
+  <div class="stat-card"><div class="stat-number">8</div><div class="stat-label">媒體露出</div></div>
+  <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">發出新聞稿</div></div>
+  <div class="stat-card"><div class="stat-number">7</div><div class="stat-label">發刊天數</div></div>
+</div>
+
+<main>
+<div class="day-nav">
+<a href="https://naer-tw.github.io/daily-news/archive/daily/2026-03-23.html" class="day-chip has-data">週一 03/23</a>
+<a href="https://naer-tw.github.io/daily-news/archive/daily/2026-03-24.html" class="day-chip has-data">週二 03/24</a>
+<a href="https://naer-tw.github.io/daily-news/archive/daily/2026-03-25.html" class="day-chip has-data">週三 03/25</a>
+<a href="https://naer-tw.github.io/daily-news/archive/daily/2026-03-26.html" class="day-chip has-data">週四 03/26</a>
+<a href="https://naer-tw.github.io/daily-news/archive/daily/2026-03-27.html" class="day-chip has-data">週五 03/27</a>
+<a href="https://naer-tw.github.io/daily-news/archive/daily/2026-03-28.html" class="day-chip has-data">週六 03/28</a>
+<a href="https://naer-tw.github.io/daily-news/archive/daily/2026-03-29.html" class="day-chip has-data">週日 03/29</a>
+</div>
+<div class="section-header highlight"><div class="section-icon">🔥</div><div class="section-name">本週焦點</div><span class="section-count">1 則</span></div>
+<article class="news-card featured" style="animation-delay:0.0s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-23</div>
+  </div>
+  <h3 class="news-title"><span class="badge badge-hot">焦點</span>焦點</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE1SOHpaN2oxVld5TldnVFdzLTBpSUtUOTY4SmlwZFVwR19YcVJCYjZRT0F0Q3dWbXN5dzBpRmo4eV94RzcwLXU4SFZLMTV5ekRxeTBWZVhYdkV1bmZSR25rTkNiS0RDYWYw?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article>
+<div class="section-header"><div class="section-icon">📋</div><div class="section-name">本週新聞總覽</div><span class="section-count">22 則</span></div>
+<article class="news-card" style="animation-delay:0.0s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-23</div>
+  </div>
+  <h3 class="news-title">從球場出發！亞大打造高齡照護新典範</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFB4ejRhYXNYNHhmVXRVZVVha3VFSjE2UnQtQlpMV1VCSlBUZGZiUHhuNkVid25vZHVEUHVfOE5ZYXhpWHRWcTRLTk01TWxhM2c4X2RlbC1tWjZDSDIyS01Idk9mVXlnbTNFd3c?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.08s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-23</div>
+  </div>
+  <h3 class="news-title">關注青少年心理健康 侯友宜訪澳Orygen總部取經</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1IcFA5UTR0dVVnc1hTdndOS0MwSFJjY0Q0c3N5Z1FCekFHNW1MamNrMDhVcG90SEhXclUwRHg2bFZiYWdiZllJT1l2UlYxNWc3Y0RnZ2dHenNIc0JHTVZiNEtpdHrSAWpBVV95cUxQcnkxSGFQUmZSWVI3SVMyUHpJd2NITHFUOXBKd0dzeTUwVmNSNmZkQU55Z0hGUk9zX1N5Zy1ydXlaNUZKTVBnN2FTSHdkbWh6WDhUeDloaTdmVDlnSjlqM21Gdlo0MFV0S0d3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.16s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-23</div>
+  </div>
+  <h3 class="news-title">轉介制度缺配套，改革恐成空談，國教盟籲補強支持機制</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE5kOTd6WWgwbTVsUUdpMzdHRHpqWmR3NnYyQzZ2TVNHMFlHRW5QNHZxWjBnRFJzdi1GZVFUdkg1MUFDdk9JbVE0TzBodEVCWXJnSHphYmhIdWhqOVAzVnc?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.24s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-24</div>
+  </div>
+  <h3 class="news-title">砸60億搶人! 教育部推高教永續計畫 12所大學領千萬獎金</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMi7wJBVV95cUxPMnpiQ2k1cmFnWHBFaHkza0o2RmpLVjA1VkdfQ1FUTHZJUWhwMFJwV2g1QURVenNYa0hVODgwRU52U3dHbUxHaWlSaFdubG9GSEpFWWhsbE9sc3dQVUhWOERtRzNPSU9TZF9xSzB3RWpDUFB2ZWJHNXZwdjFkSERFQ0FuWEo3WHlfeHJmdHVsTTFGQWlKa2Z5SGhRZlNYeGdCUXJwVlprbU1WSXBnWGdQOEp5SU42NHNkMmh6ZEItNEU1RkRnZFlxYWdWSDJ2dlE5M3VhcEp6eVA4MmdxWGpJcUozaWZBZUp4R1Q4aExpWndLM1FrbjNXSVQxSjBMcTd1SkkyWUc5Sm9XTUpIYkhZUHN1WEFUXzdLR3JYNkhqOFdXbUVhaTRvdXZUTlh1dl9Tb3RPSWVydEhGTXJ6WDV2VkNuaXNTTlVLX09FZjgzSFZoU2I1T3loXzVCLXgxLUNSWUlfNF9nSHJKU1JWUjRZ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.32s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-24</div>
+  </div>
+  <h3 class="news-title">侯友宜訪澳Orygen取經 引進國際經驗守護青少年心理健康</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMi5AJBVV95cUxQdmk5aU1NR1BSWlVQNUlFRWlsZkhMS2VkZ2hFZWJ5NUtEYkVIS3k2SFRBQ2tZQ281YjltTnBkZlJFNW5lRkxBLVduUlhKSmt2Z2k0bjRoWWtKQXNqY1lLdENfRVJUelZrakk3cncyYWhiRTRRbGtvZThfbWRERlBpcWlPckNzQi1EZWdJUVRNNlV4QUU5WHhVMnVrWWl5RXZaYk5KblBFdVBxMlVXMklzYjhoN0hnZzEzUjdxc1BrVWIzMFBXNUViUzF6aV8tbnVUQ3g5RGEyOXhaeEZQMHF1SlBKT09VR1plY0lJVzl3aWxSZEZqWklpOE83OTdRMFVVSm9obVBoVHdyLWgzbjNvaUx3MzU1WXhJNmNrcWx5bm44VEhhNWh6MnRMUTdXNmZsejJuY0dpTXAtbllBenhZeWF2YTVQMmNMdnJ3TEhVVTR3eDU5U0R1UzR2VkwwS1h5cldSZQ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article>
+<div class="section-header" style="--sec-color:#6366f1"><div class="section-icon" style="background:rgba(99,102,241,0.1)">📡</div><div class="section-name">媒體露出</div><span class="section-count">8 則露出</span></div>
+<article class="news-card" style="animation-delay:0.0s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-23</div>
+  </div>
+  <h3 class="news-title">轉介制度缺配套，改革恐成空談，國教盟籲補強支持機制</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE5kOTd6WWgwbTVsUUdpMzdHRHpqWmR3NnYyQzZ2TVNHMFlHRW5QNHZxWjBnRFJzdi1GZVFUdkg1MUFDdk9JbVE0TzBodEVCWXJnSHphYmhIdWhqOVAzVnc?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.08s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-25</div>
+  </div>
+  <h3 class="news-title">新北永和校園霸凌案 國教盟籲防影像外流二次傷害</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFB0Z09Nd3N1MzZJRnc0T0VBTUJ4cnF5dlhtY3F3VmZNR3Y4V1kxWUhiRmF5WDJ6eFZvbHFUVGVPR0U4Zy1GMjRIdWNGcW9qbXR2WlB1VVlJZDh0QdIBX0FVX3lxTE84TzBCbHVka3JxalNJSWtVbkVsWnhNeFRqbktzWHNYZ0FqZElXcUFnd0NJeEpEY1NsNEZBYVA1T3dxSnphS2szcDViMHc2WnJ2NFdocldxWGpiRFlycUR3?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.16s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-25</div>
+  </div>
+  <h3 class="news-title">新北校園霸凌案 受害學生被逼下跪 國教盟：校安3環節失守</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1CNUhFNXFQWWlGQUtaaXJ3ZnRNYVF1Z3pmMm1BRVQyZGo0QXRCbEhaSElWM0F1SGQ5NC11ZVFHWUYtNFFfbS1XSi1ncEdDX2YzNUFyeXBR0gFWQVVfeXFMTUI1SEU1cVBZaUZBS1ppcndmdE1hUXVnemYybUFFVDJkajRBdEJsSFpISVYzQXVIZDk0LXVlUUdZRi00UV9tLVdKLWdwR0NfZjM1QXJ5cFE?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.24s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-25</div>
+  </div>
+  <h3 class="news-title">校園霸凌片流傳！國教盟籲：應強化保護機制三道防線</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE9VRjFuNGc2aVdOUnlBcXdHM29PandVMHVXZlVUekp3MnktZW9lMGVlQVI5RE5LUFdscmJHc0VJOVdiVzV5RmdRVlJHWTE5UFZVemlfVlMyOU5GMHlWMEtyellwY2hJd09zZ1dHSUVB?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.32s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-25</div>
+  </div>
+  <h3 class="news-title">國中少女遭學姊逼跪圍毆還外流影片 國教盟揭校園霸凌案3大破口</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE5LSk9XeGRMQ2NPTVFNeXFqb3VpYkVpQXZsM2N3Sm5aMlg0cHp3RG9vV1FYMGhTUUhydGd5M2NxT1BrTElHY3R1Mzl5dm5wcGNIMTE3aDctMTdYUDFBaUdFX2hvY21ERzJKRlR5TmgyVW5wdFNKeWpmM21saHZxQQ?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.4s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-26</div>
+  </div>
+  <h3 class="news-title">新北校園霸凌案 國教盟：校安3環節失守</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9yTXVzamc0OFMwdEtLUGlWT3FxT0RfQTEyVnRBTW5OWFJUMDd4RHFKVWJ0TmNUR080QkZtaTlGYTJHUlY4T1dMcmgtU2FwLVlVVnpVdUtBTGFDUGxW?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.48s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-29</div>
+  </div>
+  <h3 class="news-title">校園霸凌片流傳! 國教盟籲： 應強化保護機制三道防線</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMigARBVV95cUxPNTl3NzVxTjM2bmxOWFkyWlU5cFpTTWNCcnVCaTNBWlA5TDJzdmlqY0dqbzNtdl9xSy1yS1ZWZGhhai00dUtNX3FSZU1rZnNvdEtRYzFKY1otd1BtXzlLSzlBVURzcm5ZajFKWnFRNjNEVkduMUVMQVhsMXdTeDFfVGtJVjdPdUZpLS00eE9XTWY2YmwzY0NiVVJtZEd6aVJjMmFuMzZsOERyUVd1S01lNU9SMTE5VWE5VzJvRnVqRVlXYVBlVFBEWHNNSW9uZUhCS0FTTlBRNERZT2VCdlhPY05UT1hDZWhmTWxXNGZJUWNTbW5FbnZvLWt4cy1CZ2E1RFd3NWpRMjBOeTM2WnNwejhmanFPWVRsWVhyc0doRGdkd3FXcFR3bVAzN0N4Q2VVWHJRUEY1ZUEtTXNLUloxRnd2eHZKRGR6YmJ4RDNzdERpeTRqbmNJcHZLLVN6TmdFU3A1eF96VFFXRk9oQjVIOUtzUHMwVXlDSWZqMi0xQ25qTFpZWjl1TXYwYUZwOS0zMmdHNE8zM0pUVXRTancyblN6djUwM3dhSk5nRGpLUzdGVFhKQzA0cTl1S0tLVGZnbWsxOEhvd3NpckhIZ0JEbVB2SUpRM3JCdERLYnkzUW8xRnhtS0R4VHM5SkFSek5UcjRmZzZ3TkhlNElDaGNSTg?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article><article class="news-card" style="animation-delay:0.56s">
+  <div class="card-top">
+    <div class="news-source"><span class="source-dot"></span></div>
+    <div class="news-date">2026-03-29</div>
+  </div>
+  <h3 class="news-title">討論牆 | 國教盟肯定政府下架中國針孔玩具 仍籲源頭監管</h3>
+  <p class="news-summary"></p>
+  <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE1GMEJwaWZGVFFzSjVmVjJ4dWFOeTctMXNnSmd6aVhzSnF4NjdsbDRYNndNZ2F4M0JCZXBDd0JmanlUcUZ6QW8xQTM0a3BiVUdyY2ZiUzJKMTJoMTVKMDJMQ1Bkam0?oc=5" target="_blank" rel="noopener" class="news-link">
+    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</article>
+<div class="comment-section">
+  <div class="comment-header">✏️ 本週小結</div>
+  <div class="comment-text">本週 7 天共收錄 23 則新聞。值得關注的議題包括：「焦點」、「從球場出發！亞大打造高齡照護新典範」、「關注青少年心理健康 侯友宜訪澳Orygen總部取經」。 本週共有 8 則國教盟相關報導。</div>
+</div>
+
+<div class="action-bar">
+  <a href="https://social-plugins.line.me/lineit/share?url=https://naer-tw.github.io/daily-news/archive/weekly/2026-W13.html" target="_blank" class="share-btn line">📤 分享到 LINE</a>
+</div>
+</main>
+<footer>
+  由 <a href="https://www.facebook.com/naer.tw" target="_blank">國教行動聯盟</a> 整理<br>
+  生成時間：2026/03/30 09:00
+</footer>
+<script>
+function toggleTheme() {
+  var b = document.body, btn = document.querySelector('.theme-toggle');
+  if (b.getAttribute('data-theme') === 'dark') { b.removeAttribute('data-theme'); btn.textContent = '🌙'; try{localStorage.setItem('theme','light');}catch(e){} }
+  else { b.setAttribute('data-theme', 'dark'); btn.textContent = '☀️'; try{localStorage.setItem('theme','dark');}catch(e){} }
+}
+(function() {
+  try {
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.body.setAttribute('data-theme', 'dark'); document.querySelector('.theme-toggle').textContent = '☀️';
+    }
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>
