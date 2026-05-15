@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>兒少與教育議題的國教盟日報 - 2026-05-15</title>
 <meta property="og:title" content="兒少與教育議題的國教盟日報 - 2026年05月15日">
-<meta property="og:description" content="每日兒少教育新聞精選，由國教行動聯盟整理">
+<meta property="og:description" content="每日 3 則台灣、2 則國際重大兒少與教育議題，附 AI 心得整理。國教行動聯盟。">
 <meta property="og:image" content="https://naer-tw.github.io/daily-news/og-image.png?v=2026-05-15">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -19,201 +19,171 @@
   --primary-light: #7a2840;
   --accent: #e8553d;
   --accent-light: #f07060;
-  --danger: #8b1a2a;
-  --danger-light: #b8283a;
-  --warning: #a8b8d0;
-  --bg: #f0f2f5;
+  --accent-bg: #fef4f0;
+  --ink: #1a1a2e;
+  --ink-muted: #6b7280;
+  --bg: #faf9f7;
   --card: #ffffff;
-  --text: #1a1a2e;
-  --text-light: #6b7280;
-  --border: #e5e7eb;
-  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.03);
-  --shadow-lg: 0 10px 25px rgba(0,0,0,0.06), 0 4px 10px rgba(0,0,0,0.04);
-  --radius: 16px;
-  --radius-sm: 10px;
+  --border: #e5e3dc;
+  --border-strong: #1a1a2e;
 }
 [data-theme="dark"] {
   --primary: #f07060; --primary-light: #f59090;
-  --accent: #e8553d; --accent-light: #f07060;
-  --danger: #ff8a9a; --danger-light: #ffc0c8;
-  --warning: #c0cfe0;
-  --bg: #0f172a; --card: #1e293b;
-  --text: #f1f5f9; --text-light: #94a3b8; --border: #334155;
-  --shadow: 0 1px 3px rgba(0,0,0,0.3);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.25);
-  --shadow-lg: 0 10px 25px rgba(0,0,0,0.3);
+  --accent: #f07060; --accent-bg: #2a1410;
+  --ink: #f1f5f9; --ink-muted: #94a3b8;
+  --bg: #0f172a; --card: #1e293b; --border: #334155; --border-strong: #f1f5f9;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; }
 body {
-  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-  background: var(--bg); color: var(--text); line-height: 1.75;
-  transition: background 0.3s, color 0.3s;
+  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'PingFang TC', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--ink);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
-  padding-bottom: env(safe-area-inset-bottom, 0);
 }
-
-.header {
-  background: linear-gradient(135deg, #5c1a30 0%, #7a2840 50%, #5c1a30 100%);
-  color: white; position: relative; overflow: hidden;
-}
-[data-theme="dark"] .header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); }
-.header-inner { position: relative; z-index: 1; padding: 28px 20px 20px; text-align: center; }
-.header-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(255,255,255,0.15); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-  padding: 4px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 500;
-  letter-spacing: 0.5px; margin-bottom: 12px;
-}
-.header-badge .pulse {
-  width: 6px; height: 6px; background: #e8553d; border-radius: 50%;
-  animation: pulse 2s infinite;
-}
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(232,85,61,0.6); }
-  70% { box-shadow: 0 0 0 8px rgba(232,85,61,0); }
-  100% { box-shadow: 0 0 0 0 rgba(232,85,61,0); }
-}
-.header-date { font-size: 0.9rem; opacity: 0.9; margin-bottom: 6px; }
-.header-title { font-size: 1.6rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 4px; }
-.header-sub { font-size: 0.8rem; opacity: 0.7; font-weight: 300; }
-
-.nav-bar {
-  display: flex; justify-content: center; gap: 4px; padding: 10px 16px 14px;
-  position: relative; z-index: 1; flex-wrap: wrap;
-}
-.nav-bar a {
-  display: inline-flex; align-items: center; gap: 4px; padding: 6px 14px;
-  border-radius: 50px; font-size: 0.75rem; font-weight: 600; text-decoration: none;
-  color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.1); transition: all 0.2s;
-}
-.nav-bar a:hover { background: rgba(255,255,255,0.2); color: white; }
-.nav-bar a.active { background: rgba(255,255,255,0.25); color: white; }
-
-.stats-bar {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
-  padding: 0 16px; margin-top: -20px; position: relative; z-index: 2;
-  max-width: 600px; margin-left: auto; margin-right: auto;
-}
-.stat-card {
-  background: var(--card); border-radius: var(--radius-sm); padding: 14px 8px;
-  text-align: center; box-shadow: var(--shadow-md); transition: transform 0.2s;
-}
-.stat-card:hover { transform: translateY(-2px); }
-.stat-number { font-size: 1.4rem; font-weight: 900; color: var(--primary); line-height: 1.2; }
-.stat-label { font-size: 0.65rem; color: var(--text-light); margin-top: 2px; }
-.stat-card:nth-child(2) .stat-number { color: var(--accent); }
-.stat-card:nth-child(3) .stat-number { color: var(--danger); }
-.stat-card:nth-child(4) .stat-number { color: var(--warning); }
-
 .theme-toggle {
-  position: fixed; top: 16px; right: 16px; z-index: 100; width: 40px; height: 40px;
-  border-radius: 50%; border: none; background: var(--card); box-shadow: var(--shadow-md);
-  cursor: pointer; display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; transition: all 0.3s;
+  position: fixed; top: 20px; right: 20px;
+  background: var(--card); border: 1px solid var(--border);
+  width: 40px; height: 40px; border-radius: 999px;
+  cursor: pointer; font-size: 18px; z-index: 100;
 }
-.theme-toggle:hover { transform: scale(1.1); }
-main { max-width: 600px; margin: 0 auto; padding: 24px 16px 16px; }
-
-.section-header {
-  display: flex; align-items: center; gap: 10px; margin: 24px 0 12px;
-  padding-bottom: 10px; border-bottom: 2px solid var(--border); position: relative;
+header {
+  background: var(--card); border-bottom: 2px solid var(--primary);
+  padding: 40px 20px 32px; text-align: center;
 }
-.section-header::after {
-  content: ''; position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px;
-  background: var(--primary); border-radius: 2px;
+header .badge {
+  display: inline-block; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; color: var(--accent); margin-bottom: 12px;
 }
-.section-header.highlight::after { background: var(--danger); }
-.section-header.accent::after { background: var(--accent); }
-.section-icon {
-  width: 36px; height: 36px; border-radius: 10px; display: flex;
-  align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;
-  background: rgba(92,26,48,0.08);
+header h1 {
+  font-size: clamp(24px, 4vw, 36px); font-weight: 900;
+  letter-spacing: -0.01em; color: var(--primary);
+  margin: 0 0 12px; line-height: 1.3;
 }
-.section-header.highlight .section-icon { background: rgba(139,26,42,0.1); }
-.section-header.accent .section-icon { background: rgba(232,85,61,0.1); }
-[data-theme="dark"] .section-icon { background: rgba(240,112,96,0.15); }
-.section-name { font-size: 1.05rem; font-weight: 700; color: var(--text); }
-.section-count { margin-left: auto; font-size: 0.7rem; font-weight: 600; color: var(--text-light); background: var(--bg); padding: 2px 10px; border-radius: 50px; }
-
-.news-card {
-  background: var(--card); border-radius: var(--radius); padding: 16px; margin-bottom: 10px;
-  box-shadow: var(--shadow); border: 1px solid var(--border); transition: all 0.25s ease;
-  animation: slideUp 0.5s ease both; position: relative; overflow: hidden;
+header .date {
+  font-size: 15px; color: var(--ink-muted);
+  font-variant-numeric: tabular-nums; margin-bottom: 20px;
 }
-.news-card::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
-  background: var(--accent); border-radius: 4px 0 0 4px;
+nav {
+  display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;
 }
-.news-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-.news-card.featured { border-color: rgba(201,24,74,0.15); }
-.news-card.featured::before { background: var(--danger); }
-@keyframes slideUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-.news-source { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--text-light); font-weight: 500; }
-.source-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
-.news-card.featured .source-dot { background: var(--danger); }
-.news-date { font-size: 0.7rem; color: var(--text-light); }
-.news-title { font-size: 0.95rem; font-weight: 700; line-height: 1.5; margin-bottom: 6px; color: var(--text); }
-.badge { display: inline-block; padding: 1px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; margin-right: 6px; vertical-align: middle; }
-.badge-hot { background: var(--danger); color: white; }
-.news-link {
-  display: inline-flex; align-items: center; gap: 4px; margin-top: 10px;
-  font-size: 0.82rem; color: var(--accent); text-decoration: none; font-weight: 600; transition: gap 0.2s;
+nav a {
+  padding: 8px 18px; border: 1px solid var(--border);
+  border-radius: 999px; font-size: 14px; font-weight: 500;
+  color: var(--ink); text-decoration: none;
+  background: var(--bg); transition: all 0.15s;
 }
-.news-link:hover { gap: 8px; }
-.no-news { color: var(--text-light); font-size: 0.85rem; padding: 16px; text-align: center; background: var(--card); border-radius: var(--radius); border: 1px dashed var(--border); }
-
-.comment-section {
-  background: var(--card); border-radius: var(--radius); padding: 18px;
-  margin-top: 20px; border: 1px solid var(--border); box-shadow: var(--shadow);
-  position: relative; overflow: hidden;
+nav a:hover, nav a.active {
+  background: var(--primary); color: white; border-color: var(--primary);
 }
-.comment-section::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--primary));
+main {
+  max-width: 760px; margin: 0 auto; padding: 40px 20px 80px;
 }
-.comment-header { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text); margin-bottom: 8px; font-size: 0.92rem; }
-.comment-text { font-size: 0.85rem; color: var(--text-light); line-height: 1.75; }
-
-.action-bar { display: flex; justify-content: center; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
-.share-btn {
-  display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px;
-  border-radius: 50px; font-size: 0.82rem; font-weight: 600; text-decoration: none;
-  transition: all 0.2s; border: none; cursor: pointer;
+section { margin-bottom: 56px; }
+section h2 {
+  font-size: 22px; font-weight: 800; color: var(--primary);
+  margin: 0 0 24px; padding-bottom: 12px;
+  border-bottom: 3px solid var(--primary);
+  letter-spacing: -0.005em;
 }
-.share-btn.line { background: #06C755; color: white; }
-.share-btn.line:hover { background: #05b04c; }
-.share-btn.copy { background: var(--card); color: var(--text); border: 1px solid var(--border); }
-.share-btn.copy:hover { background: var(--bg); }
-
+section .section-desc {
+  font-size: 14px; color: var(--ink-muted);
+  margin: -16px 0 24px;
+}
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  padding: 24px; margin-bottom: 16px; border-radius: 8px;
+  position: relative; transition: border-color 0.15s;
+}
+.card:hover { border-color: var(--accent); }
+.card .rank {
+  position: absolute; top: 20px; right: 24px;
+  font-size: 28px; font-weight: 900; color: var(--accent);
+  font-variant-numeric: tabular-nums; line-height: 1;
+}
+.card .title {
+  font-size: 19px; font-weight: 700; line-height: 1.4;
+  margin: 0 60px 12px 0; letter-spacing: -0.005em;
+}
+.card .title a {
+  color: var(--ink); text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.card .title a:hover { border-bottom-color: var(--accent); }
+.card .meta {
+  font-size: 13px; color: var(--ink-muted);
+  margin-bottom: 12px; display: flex; gap: 16px; flex-wrap: wrap;
+}
+.card .meta .score {
+  display: inline-block; padding: 2px 8px;
+  background: var(--accent-bg); color: var(--accent);
+  border-radius: 4px; font-size: 11px; font-weight: 600;
+}
+.card .summary {
+  font-size: 15px; color: var(--ink);
+  line-height: 1.75; opacity: 0.9;
+}
+.card .orig {
+  margin-top: 12px; padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  font-size: 13px; color: var(--ink-muted);
+}
+.card .orig summary { cursor: pointer; opacity: 0.7; }
+.card .orig p { margin-top: 8px; font-style: italic; }
+.aabe-card { border-left: 3px solid var(--accent); }
+.empty-state {
+  background: var(--card); border: 1px dashed var(--border);
+  padding: 32px; text-align: center; border-radius: 8px;
+}
+.empty-state .empty-title {
+  font-size: 16px; font-weight: 700; color: var(--ink-muted);
+  margin-bottom: 8px;
+}
+.empty-state .empty-desc {
+  font-size: 14px; color: var(--ink-muted);
+  line-height: 1.7; max-width: 480px; margin: 0 auto;
+}
+.ai-insight {
+  background: linear-gradient(135deg, #fef4f0 0%, #fff 100%);
+  border: 1px solid var(--accent); border-radius: 12px;
+  padding: 32px; margin-top: 32px;
+}
+[data-theme="dark"] .ai-insight {
+  background: linear-gradient(135deg, #2a1410 0%, var(--card) 100%);
+}
+.ai-insight h2 {
+  color: var(--accent); border-bottom-color: var(--accent);
+}
+.ai-insight .ai-badge {
+  display: inline-block; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; color: var(--accent);
+  border: 1px solid var(--accent); padding: 2px 8px;
+  border-radius: 4px; margin-bottom: 16px; text-transform: uppercase;
+}
+.ai-insight p {
+  font-size: 16px; line-height: 1.9;
+  margin-bottom: 14px;
+}
+.ai-insight p:last-child { margin-bottom: 0; }
 footer {
-  text-align: center; padding: 20px 16px; font-size: 0.72rem;
-  color: var(--text-light); border-top: 1px solid var(--border); margin-top: 24px;
+  text-align: center; padding: 40px 20px;
+  color: var(--ink-muted); font-size: 13px;
+  border-top: 1px solid var(--border);
 }
-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
-.update-time {
-  text-align: center; font-size: 0.7rem; color: var(--text-light);
-  margin-top: 16px; padding: 6px; background: var(--card); border-radius: 50px; display: inline-block;
+footer a { color: var(--ink-muted); }
+@media print {
+  .theme-toggle, nav { display: none; }
+  .card { break-inside: avoid; }
 }
-
-.back-top {
-  position: fixed; bottom: 24px; right: 16px; width: 40px; height: 40px;
-  border-radius: 50%; background: var(--primary); color: white; border: none;
-  cursor: pointer; display: flex; align-items: center; justify-content: center;
-  box-shadow: var(--shadow-lg); opacity: 0; transform: translateY(10px);
-  transition: all 0.3s; z-index: 50;
-}
-.back-top.show { opacity: 1; transform: translateY(0); }
-
-@media (max-width: 400px) {
-  .header-title { font-size: 1.3rem; }
-  .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 6px; }
-  .stat-number { font-size: 1.2rem; }
-}
-@supports (padding: env(safe-area-inset-bottom)) {
-  .back-top { bottom: calc(24px + env(safe-area-inset-bottom)); }
+@media (max-width: 600px) {
+  header { padding: 24px 16px; }
+  main { padding: 28px 14px 60px; }
+  .card { padding: 18px; }
+  .card .title { font-size: 17px; margin-right: 50px; }
+  .card .rank { font-size: 22px; top: 16px; right: 18px; }
+  .ai-insight { padding: 22px 18px; }
 }
 </style>
 </head>
@@ -221,137 +191,127 @@ footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
 
 <button class="theme-toggle" onclick="toggleTheme()" aria-label="切換深色模式">🌙</button>
 
-<div class="header">
-  <div class="header-inner">
-    <div class="header-badge"><span class="pulse"></span> 每日更新</div>
-    <div class="header-date">2026年05月15日（週五）</div>
-    <h1 class="header-title">兒少與教育議題的國教盟日報</h1>
-    <div class="header-sub">每日 18:00 自動更新 · 國教行動聯盟（AABE）</div>
-  </div>
-  <nav class="nav-bar">
-    <a href="https://naer-tw.github.io/daily-news/" class="active">📰 日報</a>
-    <a href="https://naer-tw.github.io/daily-news/archive/weekly/2026-W20.html">📅 週報</a>
-    <a href="https://naer-tw.github.io/daily-news/archive/monthly/2026-05.html">📊 月報</a>
+<header>
+  <div class="badge">每日 18:00 自動更新</div>
+  <h1>兒少與教育議題的國教盟日報</h1>
+  <div class="date">2026年05月15日（週五）</div>
+  <nav>
+    <a href="https://naer-tw.github.io/daily-news/" class="active">日報</a>
+    <a href="https://naer-tw.github.io/daily-news/archive/weekly/2026-W20.html">週報</a>
+    <a href="https://naer-tw.github.io/daily-news/archive/monthly/2026-05.html">月報</a>
   </nav>
-</div>
-
-<div class="stats-bar">
-  <div class="stat-card"><div class="stat-number">151</div><div class="stat-label">今日新聞</div></div>
-  <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">媒體露出</div></div>
-  <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">今日發稿</div></div>
-  <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">焦點報導</div></div>
-</div>
+</header>
 
 <main>
-<div class="section-header highlight"><div class="section-icon">🔥</div><div class="section-name">今日焦點</div><span class="section-count">2 則</span></div>
-<article class="news-card featured" style="animation-delay:0.0s">
-  <div class="card-top">
-    <div class="news-source"><span class="source-dot"></span>thu.edu.tw</div>
-    <div class="news-date">2026-05-15</div>
-  </div>
-  <h3 class="news-title"><span class="badge badge-hot">焦點</span>TUNGHAI UNIVERSITY</h3>
-  <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBSUzhaOXhoWUxTemd3NXJfM1hLM0NGZFlzMDVqWHVMU0U0UnpmR0hBSVA0Q19nbHdQSTltNEthU0VxV29VNmE0SGJ0Vml4QmhkbFpEaWZ3alZpc3RVejZ1QmtwV21tZFAt?oc=5" target="_blank" rel="noopener" class="news-link">
-    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-  </a>
-</article><article class="news-card featured" style="animation-delay:0.1s">
-  <div class="card-top">
-    <div class="news-source"><span class="source-dot"></span>自由健康網</div>
-    <div class="news-date">2026-05-15</div>
-  </div>
-  <h3 class="news-title"><span class="badge badge-hot">焦點</span>工作壓力大到無法呼吸！台中白領男失眠崩潰 醫揭焦慮警訊</h3>
-  <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1lY3Y3RTdvLXVsaVNodFZhTjV4YXp6R080RG9pYUdWcUN4NzllcVFUNGthczB0QTB1aDdCaFhPYjQyNFhnTlRJQnl4LURfMnVlSHBBdVJtalJqT0FKVEs2cHdWSkZYalo2c3fSAWpBVV95cUxNZWN2N0U3by11bGlTaHRWYU41eGF6ekdPNERvaWFHVnFDeDc5ZXFRVDRrYXMwdEEwdWg3QmhYT2I0MjRYZ05USUJ5eC1EXzJ1ZUhwQXVSbWpSak9BSlRLNnB3VkpGWGpaNnN3?oc=5" target="_blank" rel="noopener" class="news-link">
-    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-  </a>
-</article>
-<div class="section-header"><div class="section-icon">📚</div><div class="section-name">教育政策</div><span class="section-count">1 則</span></div>
-<article class="news-card" style="animation-delay:0.2s">
-  <div class="card-top">
-    <div class="news-source"><span class="source-dot"></span>rti.org.tw</div>
-    <div class="news-date">2026-05-15</div>
-  </div>
-  <h3 class="news-title">「御風輪」首航愛媛松山港 台日海事學生交流創新頁</h3>
-  <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE9XVGhKVDNkd3pNNXdoOEhzc1kwSWVvNG9nM2R0RkxraS0xWjU2cFJJSnJKSjNJQnRfYno3b2RCeXlKdGZOajZNTWE4ZEtxYzFwUE1YeC00VQ?oc=5" target="_blank" rel="noopener" class="news-link">
-    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-  </a>
-</article>
-<div class="section-header accent"><div class="section-icon">👶</div><div class="section-name">兒少議題</div><span class="section-count">1 則</span></div>
-<article class="news-card" style="animation-delay:0.4s">
-  <div class="card-top">
-    <div class="news-source"><span class="source-dot"></span>蕃新聞</div>
-    <div class="news-date">2026-05-15</div>
-  </div>
-  <h3 class="news-title">台北張老師「笑吧！校巴」走進東吳大學 守護校園心理健康</h3>
-  <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE1WeV9LSFNpN3NlMlEyNnhkRVhCNXBtTDdWUjQ4TWlxM0Rlb3RrTHRJRDVfVDAzMnZoOEFiQU5QX01jRTUwcHdoR3RWd1lkcnJsX2c?oc=5" target="_blank" rel="noopener" class="news-link">
-    閱讀全文 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-  </a>
-</article>
-<div class="section-header" style="--sec-color:#6366f1"><div class="section-icon" style="background:rgba(99,102,241,0.1)">📡</div><div class="section-name">媒體聲量</div><span class="section-count">0 則露出</span></div>
-<div class="no-news">今日暫無國教盟相關媒體露出</div>
-<div class="comment-section">
-  <div class="comment-header">✏️ 小編短評</div>
-  <div class="comment-text">今日值得關注的議題包括：「TUNGHAI UNIVERSITY」、「「御風輪」首航愛媛松山港 台日海事學生交流創新頁」、「工作壓力大到無法呼吸！台中白領男失眠崩潰 醫揭焦慮警訊」。 國教盟持續關注兒少教育議題，為孩子的未來發聲！</div>
-</div>
 
-<div class="action-bar">
-  <a href="https://social-plugins.line.me/lineit/share?url=https://naer-tw.github.io/daily-news/" target="_blank" class="share-btn line">📤 分享到 LINE</a>
-  <button class="share-btn copy" onclick="copyLink()">📋 複製連結</button>
-</div>
+<section id="taiwan">
+  <h2>台灣重大議題</h2>
+  <div class="section-desc">每日精選 3 則，依議題重要性、政府/立法訊號、權威媒體加權評分</div>
+  
+<article class="card">
+  <div class="rank">#1</div>
+  <h3 class="title"><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5QOFh3dUVTTkgtV1BYUFJZUDhkRWp4eGFGY19ianNrR2dTZHY0TmFKZVJqNXlabGRGNUF2YjZmVU0yTjY3RUljdnFYSFYwcXdTNTA1ZEU0TF83RGp4cGNiSTF0ajdXbm1zTFoxdzV3?oc=5" target="_blank" rel="noopener">托育專法三讀！桃議員盼：應強化兒童保護與人員支持 - 中時新聞網</a></h3>
+  <div class="meta"><span class="source">中時新聞網</span><span class="score">議題分數 7</span></div>
+  <p class="summary">托育專法三讀！桃議員盼：應強化兒童保護與人員支持 中時新聞網</p>
+</article>
 
-<div style="text-align:center;margin-top:16px">
-  <span class="update-time">🕐 更新時間：2026/05/15 20:55</span>
-</div>
+<article class="card">
+  <div class="rank">#2</div>
+  <h3 class="title"><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE5BTEFha0F0QlhhYVNDcnZKSllqSk13TVpnRDZ1d185aUpfQ1Jic29hZldmS3d3NDE2d3h1dnZ4RDAtT2MzSHNxbHZHNk5RYkVjRlp3SmlMcVRjYUFFRHcxdVVhRHBtRjZET1HSAWpBVV95cUxOQUxBYWtBdEJYYWFTQ3J2SkpZakpNd01aZ0Q2dXdfOWlKX0NSYnNvYWZXZkt3dzQxNnd4dXZ2eEQwLU9jM0hzcWx2RzZOUWJFY0Zad0ppTHFUY2FBRUR3MXVVYURwbUY2RE9R?oc=5" target="_blank" rel="noopener">教育部首推美感教育 結合社會情緒學習導航卡 - 自由時報</a></h3>
+  <div class="meta"><span class="source">自由時報</span><span class="score">議題分數 5</span></div>
+  <p class="summary">教育部首推美感教育 結合社會情緒學習導航卡 自由時報</p>
+</article>
+
+<article class="card">
+  <div class="rank">#3</div>
+  <h3 class="title"><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9PU08yZHpUMW0zSzNkYU83Sm9OTGxDNlhzc1ZhMC1BSDJ2cVlMMnlkZTV1azgwZHRFSzVkVTE1VUFBQndTdHFoMXp6c0hNYUlkWFJjSHJUSWQ1VV9zVU9Z?oc=5" target="_blank" rel="noopener">幼教團體籲育兒津貼提高到1.5萬搶救少子女化| 生活 - 中央社 CNA</a></h3>
+  <div class="meta"><span class="source">中央社 CNA</span><span class="score">議題分數 4</span></div>
+  <p class="summary">幼教團體籲育兒津貼提高到1.5萬搶救少子女化| 生活 中央社 CNA</p>
+</article>
+</section>
+
+<section id="international">
+  <h2>國際重大議題</h2>
+  <div class="section-desc">每日精選 2 則，來源：BBC / Guardian / Google News / Straits Times</div>
+  
+<article class="card">
+  <div class="rank">#1</div>
+  <h3 class="title"><a href="https://www.straitstimes.com/singapore/courts-crime/reformative-training-for-girl-who-slashed-2-school-staff-members-with-penknife" target="_blank" rel="noopener">女學生持刀傷2名教職員 判接受感化教育</a></h3>
+  <div class="meta"><span class="source">StraitsTimes / The Straits Times</span><span class="score">議題分數 9</span></div>
+  <p class="summary">該名女學生因手機遭沒收後，持美工刀攻擊兩名學校職員。</p>
+  <details class="orig"><summary>原文標題</summary><p>Reformative training for girl who slashed 2 school staff members with penknife</p></details>
+</article>
+
+<article class="card">
+  <div class="rank">#2</div>
+  <h3 class="title"><a href="https://www.bbc.com/news/articles/cgrlvxqkwg8o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">英格蘭校園禁用智慧型手機 各界籲明確執行指引</a></h3>
+  <div class="meta"><span class="source">BBC / Unknown</span><span class="score">議題分數 8</span></div>
+  <p class="summary">教育部長計畫在英格蘭學校禁用智慧型手機，但校長與倡議團體呼籲政府提供更明確的執行指引。</p>
+  <details class="orig"><summary>原文標題</summary><p>Calls for clarity over schools smartphone ban</p></details>
+</article>
+</section>
+
+<section id="aabe">
+  <h2>近 7 日國教盟媒體露出</h2>
+  <div class="section-desc">關鍵字：國教盟、國教行動聯盟、王瀚陽（Google News RSS 對小眾關鍵字有 ~2 日延遲，故採 7 日視窗）</div>
+  
+<article class="card aabe-card">
+  <h3 class="title"><a href="https://news.google.com/rss/articles/CBMi-wNBVV95cUxOekc4M2VsRmFIbllNamM0VGxkbXVrSTIycXpfQXgzaEVRQU1uM0lZTG94MkVjU055ZDh3dk9NNUlNRzY4ay1mVzBBUUdCbHY1WWVkMVJBRUYzV2xHQl81TlYxUmc0SHFrM0RYcVA1dlR1eVlxQXd4MDVZNnQzUXhBcEQ1elV0dXIwQ0ZjTGRCcG9qb21BTkVrZFZWR2NZOUNMQmpkTW9RM2hyVk1uSkxpVExQQlBydnBWNkVaa2oyanJMY2o1c1YxNVV6MTZ0RzRpWmFxV09lWXluaG81MTJYZkNIN2tITk54T0g5aVlyY01Na2lSMWRvZFBjREhnY3dfQnJ2NVE2U1dXMU1vZF9IVVZiZUp2RThVVUFoN1FjSWM2dmk5SFR3WmZOWXVHZ2ZYUVRud1Y4YUZZMTJTLTBxX014dXNINWJkXzEzUjJpekk1NDNHN1pvUFE5ckc5SWczcWdvZzY0ajEyeXJGMGtJVFhKb3EyZmowdk1Ed2ZGRkd6NU9ZYTBkYzFnNG0zTFlDbElmd1gta2N5bDVRcDl4NU9LSjdTMlhDY05oQ1lGVnpnRElGVmU4bkFaSnhhM2ludEZYZlI0NmxwZkFCR0szZ1VaNEpFQ1lvY3AzdHBydktEN3BtcFdaZVJURk40MUhVUlJBU0pDNkcwa2c?oc=5" target="_blank" rel="noopener">國教盟：性平法造成校園集體焦慮 3大方向修法 - MSN</a></h3>
+  <div class="meta"><span class="source">MSN</span><span class="date">05/12</span></div>
+  <p class="summary">國教盟：性平法造成校園集體焦慮 3大方向修法 MSN</p>
+</article>
+
+<article class="card aabe-card">
+  <h3 class="title"><a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE9GWU5YMnQ4U0staWRfanFhLVdLaGJRRGpDVGo4MHAyTTdLcW5PV3hMNnVTTG5uLVZGV2ZPV0w1bGt4cjVuSnBwU3QwX2VVYV9JZmc?oc=5" target="_blank" rel="noopener">因應修法 民團籲設兒童家庭部 - 中華新聞雲／中華日報</a></h3>
+  <div class="meta"><span class="source">中華新聞雲／中華日報</span><span class="date">05/12</span></div>
+  <p class="summary">因應修法 民團籲設兒童家庭部 中華新聞雲／中華日報</p>
+</article>
+
+<article class="card aabe-card">
+  <h3 class="title"><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9yVjQ2b1hJeExVNE83b0h6VkVyM1FIRk5jdWF4X0x6LWNFblFyQ2V4eHZmektEX2NqTVZoXzVFRVo1VHdGZWFiUkF3cGVmenpwSkE0WnNEMk5MTHdLTGFB?oc=5" target="_blank" rel="noopener">《兒少權法》15年最大修法 民團憂恐陷入「有責無權」困境 - 工商時報</a></h3>
+  <div class="meta"><span class="source">工商時報</span><span class="date">05/12</span></div>
+  <p class="summary">《兒少權法》15年最大修法 民團憂恐陷入「有責無權」困境 工商時報</p>
+</article>
+
+<article class="card aabe-card">
+  <h3 class="title"><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9scmpkaWh5eUFQSnJPVmlBdG45TjVVYzh0VEFLLU5DZ2pUVFp3R3NoSkkwRUs0eDMtNHdZS3hlZmdtT09NaHlWbmtKNnBoODlfWk8ybGhn?oc=5" target="_blank" rel="noopener">兒少議題頻傳、自殺率攀升 民團呼籲：不能只修法，應成立兒童家庭部 | 鏡週刊 - LINE TODAY</a></h3>
+  <div class="meta"><span class="source">LINE TODAY</span><span class="date">05/12</span></div>
+  <p class="summary">兒少議題頻傳、自殺率攀升 民團呼籲：不能只修法，應成立兒童家庭部 | 鏡週刊 LINE TODAY</p>
+</article>
+
+<article class="card aabe-card">
+  <h3 class="title"><a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFBLZDhPa3N3M0VFZjRUMlVybmFtUXdZTDJETTdhN3pxMlZraWhpWGc3WTZLWjJPcEppVjc1cVJlNVc4Wm53eFRUUjVaSkd2WU1CRVU4aVYyVQ?oc=5" target="_blank" rel="noopener">兒少權法管理分散 盼設專責兒童家庭部 - anntw.com</a></h3>
+  <div class="meta"><span class="source">anntw.com</span><span class="date">05/12</span></div>
+  <p class="summary">兒少權法管理分散 盼設專責兒童家庭部 anntw.com</p>
+</article>
+</section>
+
+<section class="ai-insight" id="insight">
+  <h2>AI 心得整理</h2>
+  <div class="ai-badge">Claude Sonnet 4.5</div>
+  <p>本日新聞聚焦托育與教育政策的三大面向：托育專法完成立法、美感教育結合社會情緒學習，以及育兒津貼提高的呼籲，顯示政府與民間正從法制、課程、經濟支持多管齊下因應少子女化挑戰。國際上，新加坡校園暴力事件源於手機管理引發衝突，英國則推動全面禁用智慧型手機政策，與台灣校園手機管理議題產生呼應。國教盟近期倡議設立兒童家庭部，整合分散的兒少權責，恰與托育專法需要跨部門協作的困境相互印證。</p>
+</section>
+
 </main>
 
 <footer>
-  由 <a href="https://www.facebook.com/naer.tw" target="_blank">國教行動聯盟</a> 整理<br>
-  新聞來源：Google News 台灣
+  <p>本日報由國教行動聯盟（AABE）每日 18:00 自動生成 · 6 大議題類別 + 4 國際來源 + AI 觀察整理</p>
+  <p>網址：<a href="https://naer-tw.github.io/daily-news/">naer-tw.github.io/daily-news/</a></p>
 </footer>
-
-<button class="back-top" onclick="scrollToTop()" id="backTop">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
-</button>
 
 <script>
 function toggleTheme() {
-  var b = document.body, btn = document.querySelector('.theme-toggle');
-  if (b.getAttribute('data-theme') === 'dark') {
-    b.removeAttribute('data-theme'); btn.textContent = '🌙';
-    try { localStorage.setItem('theme','light'); } catch(e) {}
-  } else {
-    b.setAttribute('data-theme','dark'); btn.textContent = '☀️';
-    try { localStorage.setItem('theme','dark'); } catch(e) {}
-  }
+  var t = document.body.dataset.theme;
+  document.body.dataset.theme = (t === 'dark') ? 'light' : 'dark';
+  localStorage.setItem('theme', document.body.dataset.theme);
+  document.querySelector('.theme-toggle').textContent = document.body.dataset.theme === 'dark' ? '☀️' : '🌙';
 }
 (function() {
-  try {
-    if (localStorage.getItem('theme') === 'dark' ||
-        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
-      document.body.setAttribute('data-theme','dark');
-      document.querySelector('.theme-toggle').textContent = '☀️';
-    }
-  } catch(e) {}
+  var saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.body.dataset.theme = saved;
+  document.querySelector('.theme-toggle').textContent = saved === 'dark' ? '☀️' : '🌙';
 })();
-function scrollToTop() { window.scrollTo({ top:0, behavior:'smooth' }); }
-window.addEventListener('scroll', function() {
-  document.getElementById('backTop').classList.toggle('show', window.scrollY > 300);
-});
-function copyLink() {
-  var url = window.location.href;
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(url).then(function() {
-      var btn = document.querySelector('.copy');
-      btn.textContent = '✅ 已複製';
-      setTimeout(function() { btn.textContent = '📋 複製連結'; }, 2000);
-    });
-  } else {
-    var t = document.createElement('textarea');
-    t.value = url; document.body.appendChild(t); t.select();
-    document.execCommand('copy'); document.body.removeChild(t);
-    var btn = document.querySelector('.copy');
-    btn.textContent = '✅ 已複製';
-    setTimeout(function() { btn.textContent = '📋 複製連結'; }, 2000);
-  }
-}
 </script>
+
 </body>
 </html>
