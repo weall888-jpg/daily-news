@@ -1,0 +1,7 @@
+# launchd 執行 log（不入 repo）
+.launchd*.log
+*.log
+
+# 臨時檔
+.DS_Store
+*.swp
